@@ -129,5 +129,14 @@
     <ClInclude Include="rs_undoable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_arc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_atomicentity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

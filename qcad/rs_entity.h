@@ -376,9 +376,60 @@ public:
 	*/
 
 	virtual double  getDistanceToPoint(const RS_Vector& coord,
-		)
+		                               RS_Entity** entity = NULL,
+									   RS2::ResolveLevel level = RS2::ResolveNone, 
+									   double solidDist = RS_MAXDOUBLE) = 0;
 
+	virtual bool isPointOnEntity(const RS_Vector& coord, double tolerance=RS_TOLERANCE);
 
-}
+	virtual void move(RS_Vector offset) = 0;
+
+	virtual void rotate(RS_Vector center, double angle) = 0;
+
+	virtual void scale(RS_Vector center, RS_Vector factor) = 0;
+
+	virtual void mirror(RS_Vector axisPoint1, RS_Vector axisPoint2) = 0;
+
+	virtual void stretch(RS_Vector firstcorner,
+		                 RS_Vector secondCorner,
+						 RS_Vector offset);
+
+	virtual void moveRef(const RS_Vector&,
+		    const RS_Vector& )  {
+				return;
+	}
+
+	virtual void draw(RS_Painter* painter, RS_GraphicView* view,
+		double patternOffset = 0.0) = 0;
+
+	double getStyleFactor(RS_String key);
+	RS_StringList getAllKeys();
+	void setUserDefVar(RS_String key, RS_String val);
+	void delUserDefVar(RS_String key);
+
+	friend std::ostream& operator << (std::ostream& os, RS_Entity& e);
+
+	virtual void calculateBorders() = 0;
+
+protected:
+
+	RS_EntityContainer* parent;
+
+	RS_Vector minV;
+	RS_Vector maxV;
+
+	RS_Layer* layer;
+
+	unsigned long int id;
+
+	RS_Pen pen;
+
+	bool updateEnabled;
+
+private:
+
+	RS_Dict<RS_String> varlist;
+
+};
 
 #endif
