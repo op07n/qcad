@@ -1,0 +1,137 @@
+\hypertarget{class_function_parser}{\section{Function\-Parser Class Reference}
+\label{class_function_parser}\index{Function\-Parser@{Function\-Parser}}
+}
+
+
+{\ttfamily \#include $<$fparser.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef double($\ast$ \hyperlink{class_function_parser_aea1405edcb05ec80b5d0176c07aaf052}{Function\-Ptr} )(const double $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}{Parse} (const std\-::string \&Function, const std\-::string \&Vars, bool use\-Degrees=false)
+\item 
+const char $\ast$ \hyperlink{class_function_parser_a60c9d56cad01078c8e2f02ecd90b3050}{Error\-Msg} (void) const 
+\item 
+double \hyperlink{class_function_parser_a8fe3538f4cd207346c390059ba334023}{Eval} (const double $\ast$Vars)
+\item 
+int \hyperlink{class_function_parser_aaaa3542d38f764f3b9c440f2d7e13751}{Eval\-Error} (void) const 
+\item 
+bool \hyperlink{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}{Add\-Constant} (const std\-::string \&name, double value)
+\item 
+bool \hyperlink{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}{Add\-Function} (const std\-::string \&name, \hyperlink{class_function_parser_aea1405edcb05ec80b5d0176c07aaf052}{Function\-Ptr}, unsigned params\-Amount)
+\item 
+bool \hyperlink{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}{Add\-Function} (const std\-::string \&name, \hyperlink{class_function_parser}{Function\-Parser} \&)
+\item 
+void \hyperlink{class_function_parser_a5466523ee5198fb4b38461b362b1481d}{Optimize} ()
+\item 
+\hyperlink{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}{Function\-Parser} ()
+\item 
+\hyperlink{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}{$\sim$\-Function\-Parser} ()
+\item 
+void \hyperlink{class_function_parser_a7295bfa38eb25cd3111f0c30294232b9}{Print\-Byte\-Code} (std\-::ostream \&dest) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_function_parser_aea1405edcb05ec80b5d0176c07aaf052}{\index{Function\-Parser@{Function\-Parser}!Function\-Ptr@{Function\-Ptr}}
+\index{Function\-Ptr@{Function\-Ptr}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Function\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef double($\ast$ Function\-Parser\-::\-Function\-Ptr)(const double $\ast$)}}\label{class_function_parser_aea1405edcb05ec80b5d0176c07aaf052}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}{\index{Function\-Parser@{Function\-Parser}!Function\-Parser@{Function\-Parser}}
+\index{Function\-Parser@{Function\-Parser}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Function\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}Function\-Parser\-::\-Function\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a18468eeb56ac5c1b1a6a0b0cebb2c045}
+\hypertarget{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}{\index{Function\-Parser@{Function\-Parser}!$\sim$\-Function\-Parser@{$\sim$\-Function\-Parser}}
+\index{$\sim$\-Function\-Parser@{$\sim$\-Function\-Parser}!FunctionParser@{Function\-Parser}}
+\subsubsection[{$\sim$\-Function\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}Function\-Parser\-::$\sim$\-Function\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a50257dda6ec4f2c4adf6740e31cf7da7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}{\index{Function\-Parser@{Function\-Parser}!Add\-Constant@{Add\-Constant}}
+\index{Add\-Constant@{Add\-Constant}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Add\-Constant}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-Parser\-::\-Add\-Constant (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a481976b6eb58b15d31d4f3700d9ad730}
+\hypertarget{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}{\index{Function\-Parser@{Function\-Parser}!Add\-Function@{Add\-Function}}
+\index{Add\-Function@{Add\-Function}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Add\-Function}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-Parser\-::\-Add\-Function (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf Function\-Ptr}}]{, }
+\item[{unsigned}]{params\-Amount}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a8d477dd0041ca594dac795bba24c9f3a}
+\hypertarget{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}{\index{Function\-Parser@{Function\-Parser}!Add\-Function@{Add\-Function}}
+\index{Add\-Function@{Add\-Function}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Add\-Function}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-Parser\-::\-Add\-Function (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{{\bf Function\-Parser} \&}]{}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a7d6c6465658e9831d0c51e3bd6b5a4c0}
+\hypertarget{class_function_parser_a60c9d56cad01078c8e2f02ecd90b3050}{\index{Function\-Parser@{Function\-Parser}!Error\-Msg@{Error\-Msg}}
+\index{Error\-Msg@{Error\-Msg}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Error\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Function\-Parser\-::\-Error\-Msg (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_function_parser_a60c9d56cad01078c8e2f02ecd90b3050}
+\hypertarget{class_function_parser_a8fe3538f4cd207346c390059ba334023}{\index{Function\-Parser@{Function\-Parser}!Eval@{Eval}}
+\index{Eval@{Eval}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Eval}]{\setlength{\rightskip}{0pt plus 5cm}double Function\-Parser\-::\-Eval (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{Vars}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a8fe3538f4cd207346c390059ba334023}
+\hypertarget{class_function_parser_aaaa3542d38f764f3b9c440f2d7e13751}{\index{Function\-Parser@{Function\-Parser}!Eval\-Error@{Eval\-Error}}
+\index{Eval\-Error@{Eval\-Error}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Eval\-Error}]{\setlength{\rightskip}{0pt plus 5cm}int Function\-Parser\-::\-Eval\-Error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_function_parser_aaaa3542d38f764f3b9c440f2d7e13751}
+\hypertarget{class_function_parser_a5466523ee5198fb4b38461b362b1481d}{\index{Function\-Parser@{Function\-Parser}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Optimize}]{\setlength{\rightskip}{0pt plus 5cm}void Function\-Parser\-::\-Optimize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_a5466523ee5198fb4b38461b362b1481d}
+\hypertarget{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}{\index{Function\-Parser@{Function\-Parser}!Parse@{Parse}}
+\index{Parse@{Parse}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Parse}]{\setlength{\rightskip}{0pt plus 5cm}int Function\-Parser\-::\-Parse (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{Function, }
+\item[{const std\-::string \&}]{Vars, }
+\item[{bool}]{use\-Degrees = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_function_parser_af4e0b209ec9771dcd76e27f3fcad1b51}
+\hypertarget{class_function_parser_a7295bfa38eb25cd3111f0c30294232b9}{\index{Function\-Parser@{Function\-Parser}!Print\-Byte\-Code@{Print\-Byte\-Code}}
+\index{Print\-Byte\-Code@{Print\-Byte\-Code}!FunctionParser@{Function\-Parser}}
+\subsubsection[{Print\-Byte\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void Function\-Parser\-::\-Print\-Byte\-Code (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{dest}
+\end{DoxyParamCaption}
+) const}}\label{class_function_parser_a7295bfa38eb25cd3111f0c30294232b9}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fparser_8h}{fparser.\-h}\end{DoxyCompactItemize}

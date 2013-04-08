@@ -1,0 +1,253 @@
+\hypertarget{class_r_s___atomic_entity}{\section{R\-S\-\_\-\-Atomic\-Entity Class Reference}
+\label{class_r_s___atomic_entity}\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-atomicentity.\-h$>$}
+
+
+
+Inherits \hyperlink{class_r_s___entity}{R\-S\-\_\-\-Entity}.
+
+
+
+Inherited by \hyperlink{class_r_s___ellipse}{R\-S\-\_\-\-Ellipse}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___atomic_entity_abaf0dc8a9de97897ad33fad955101e74}{R\-S\-\_\-\-Atomic\-Entity} (R\-S\-\_\-\-Entity\-Container $\ast$\hyperlink{class_r_s___entity_a80358a8d2fc6739a516a278dc500b49f}{parent}=N\-U\-L\-L)
+\item 
+virtual \hyperlink{class_r_s___atomic_entity_a78ca30fac2c4a595f4165b90f5ee84b1}{$\sim$\-R\-S\-\_\-\-Atomic\-Entity} ()
+\item 
+virtual bool \hyperlink{class_r_s___atomic_entity_ab24c1b48be676704c8bed2d8511afd76}{is\-Contianer} () const 
+\item 
+virtual bool \hyperlink{class_r_s___atomic_entity_a6cdc2a83438fb51b13fec598f73da6a3}{is\-Atomic} () const 
+\item 
+virtual unsigned long int \hyperlink{class_r_s___atomic_entity_aa5ef736f07da84743b869a80efb8ad51}{count} ()
+\item 
+virtual unsigned long int \hyperlink{class_r_s___atomic_entity_a71f57de7f225e92a51bbbd0212a0722d}{count\-Deep} ()
+\item 
+virtual \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___atomic_entity_a7c65ecfa3124659ad667ea20d7e42607}{get\-Endpoint} () const 
+\item 
+virtual \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___atomic_entity_a5e2f2744b91283e110b98e1359c006cf}{get\-Startpoint} () const 
+\item 
+virtual double \hyperlink{class_r_s___atomic_entity_af830be013d3492aab78525660e2721e8}{get\-Direction1} () const 
+\item 
+virtual double \hyperlink{class_r_s___atomic_entity_a4b83b0f0d31b35914f2e86a67cac3a6c}{get\-Direction2} () const 
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_a3de4b75e6f1eb4bf419c3535db682654}{set\-Startpoint\-Selected} (bool select)
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_aca8cf2ec2643782c68cc9700417fec31}{set\-Endpoint\-Selected} (bool select)
+\item 
+bool \hyperlink{class_r_s___atomic_entity_a473df8be63625c778525c1f368adbeb0}{is\-Startpoint\-Selected} () const 
+\item 
+bool \hyperlink{class_r_s___atomic_entity_a444007e91f942f6ae174744b67294b01}{is\-Endpoint\-Selected} () const 
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_ae09eb376e84a70a3bcf2367ed9397cca}{move\-Startpoint} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&)
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_a7e35f48ae53da907f698e0e73887a1ca}{move\-Endpoint} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&)
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_a33af8cca51e643cffbac55f3dbf9f670}{trim\-Startpoint} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&pos)
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_a021db5f1757de41b2fe385d22bf2aaea}{trim\-Endpoint} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&pos)
+\item 
+virtual \hyperlink{class_r_s2_a30e80df2ef4bb36f4e89ea500eb212ab}{R\-S2\-::\-Ending} \hyperlink{class_r_s___atomic_entity_a7bb9189a26b1cd6e17d6b6283190d05c}{get\-Trim\-Point} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&)
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_a70264ad0d8a6ffac2af46e6be94e8f69}{reverse} ()
+\item 
+virtual void \hyperlink{class_r_s___atomic_entity_ae25b3ef890c15bc0fcd8a9fa4308bdbc}{move\-Selected\-Ref} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&ref, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&offset)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___atomic_entity_abaf0dc8a9de97897ad33fad955101e74}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}}
+\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{R\-S\-\_\-\-Atomic\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Atomic\-Entity\-::\-R\-S\-\_\-\-Atomic\-Entity (
+\begin{DoxyParamCaption}
+\item[{R\-S\-\_\-\-Entity\-Container $\ast$}]{parent = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___atomic_entity_abaf0dc8a9de97897ad33fad955101e74}
+\hypertarget{class_r_s___atomic_entity_a78ca30fac2c4a595f4165b90f5ee84b1}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!$\sim$\-R\-S\-\_\-\-Atomic\-Entity@{$\sim$\-R\-S\-\_\-\-Atomic\-Entity}}
+\index{$\sim$\-R\-S\-\_\-\-Atomic\-Entity@{$\sim$\-R\-S\-\_\-\-Atomic\-Entity}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{$\sim$\-R\-S\-\_\-\-Atomic\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Atomic\-Entity\-::$\sim$\-R\-S\-\_\-\-Atomic\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a78ca30fac2c4a595f4165b90f5ee84b1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___atomic_entity_aa5ef736f07da84743b869a80efb8ad51}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!count@{count}}
+\index{count@{count}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned long int R\-S\-\_\-\-Atomic\-Entity\-::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_aa5ef736f07da84743b869a80efb8ad51}
+
+
+Implements \hyperlink{class_r_s___entity_a869d21b67b2a3de5821c3c5ae4828b28}{R\-S\-\_\-\-Entity}.
+
+\hypertarget{class_r_s___atomic_entity_a71f57de7f225e92a51bbbd0212a0722d}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!count\-Deep@{count\-Deep}}
+\index{count\-Deep@{count\-Deep}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{count\-Deep}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned long int R\-S\-\_\-\-Atomic\-Entity\-::count\-Deep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a71f57de7f225e92a51bbbd0212a0722d}
+
+
+Implements \hyperlink{class_r_s___entity_a2949d5df3f28818e0732088a9f5b5b0d}{R\-S\-\_\-\-Entity}.
+
+\hypertarget{class_r_s___atomic_entity_af830be013d3492aab78525660e2721e8}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!get\-Direction1@{get\-Direction1}}
+\index{get\-Direction1@{get\-Direction1}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{get\-Direction1}]{\setlength{\rightskip}{0pt plus 5cm}virtual double R\-S\-\_\-\-Atomic\-Entity\-::get\-Direction1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_af830be013d3492aab78525660e2721e8}
+\hypertarget{class_r_s___atomic_entity_a4b83b0f0d31b35914f2e86a67cac3a6c}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!get\-Direction2@{get\-Direction2}}
+\index{get\-Direction2@{get\-Direction2}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{get\-Direction2}]{\setlength{\rightskip}{0pt plus 5cm}virtual double R\-S\-\_\-\-Atomic\-Entity\-::get\-Direction2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a4b83b0f0d31b35914f2e86a67cac3a6c}
+\hypertarget{class_r_s___atomic_entity_a7c65ecfa3124659ad667ea20d7e42607}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!get\-Endpoint@{get\-Endpoint}}
+\index{get\-Endpoint@{get\-Endpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{get\-Endpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Atomic\-Entity\-::get\-Endpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a7c65ecfa3124659ad667ea20d7e42607}
+
+
+Reimplemented in \hyperlink{class_r_s___ellipse_a03c227db29f9715609b563952f8433bd}{R\-S\-\_\-\-Ellipse}.
+
+\hypertarget{class_r_s___atomic_entity_a5e2f2744b91283e110b98e1359c006cf}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!get\-Startpoint@{get\-Startpoint}}
+\index{get\-Startpoint@{get\-Startpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{get\-Startpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Atomic\-Entity\-::get\-Startpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a5e2f2744b91283e110b98e1359c006cf}
+
+
+Reimplemented in \hyperlink{class_r_s___ellipse_a69a4fb89ad07c48686c0ce0bf8140291}{R\-S\-\_\-\-Ellipse}.
+
+\hypertarget{class_r_s___atomic_entity_a7bb9189a26b1cd6e17d6b6283190d05c}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!get\-Trim\-Point@{get\-Trim\-Point}}
+\index{get\-Trim\-Point@{get\-Trim\-Point}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{get\-Trim\-Point}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf R\-S2\-::\-Ending} R\-S\-\_\-\-Atomic\-Entity\-::get\-Trim\-Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a7bb9189a26b1cd6e17d6b6283190d05c}
+
+
+Reimplemented in \hyperlink{class_r_s___ellipse_a5ee493b78f03642839dfd3c860304f55}{R\-S\-\_\-\-Ellipse}.
+
+\hypertarget{class_r_s___atomic_entity_a6cdc2a83438fb51b13fec598f73da6a3}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!is\-Atomic@{is\-Atomic}}
+\index{is\-Atomic@{is\-Atomic}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{is\-Atomic}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Atomic\-Entity\-::is\-Atomic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a6cdc2a83438fb51b13fec598f73da6a3}
+Must be overwritten to return true if an entity type is an atomic entity. 
+
+Implements \hyperlink{class_r_s___entity_a3918893713669c92ed54ba327d31bfef}{R\-S\-\_\-\-Entity}.
+
+\hypertarget{class_r_s___atomic_entity_ab24c1b48be676704c8bed2d8511afd76}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!is\-Contianer@{is\-Contianer}}
+\index{is\-Contianer@{is\-Contianer}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{is\-Contianer}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Atomic\-Entity\-::is\-Contianer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_ab24c1b48be676704c8bed2d8511afd76}
+\hypertarget{class_r_s___atomic_entity_a444007e91f942f6ae174744b67294b01}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!is\-Endpoint\-Selected@{is\-Endpoint\-Selected}}
+\index{is\-Endpoint\-Selected@{is\-Endpoint\-Selected}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{is\-Endpoint\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Atomic\-Entity\-::is\-Endpoint\-Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___atomic_entity_a444007e91f942f6ae174744b67294b01}
+\hypertarget{class_r_s___atomic_entity_a473df8be63625c778525c1f368adbeb0}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!is\-Startpoint\-Selected@{is\-Startpoint\-Selected}}
+\index{is\-Startpoint\-Selected@{is\-Startpoint\-Selected}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{is\-Startpoint\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Atomic\-Entity\-::is\-Startpoint\-Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___atomic_entity_a473df8be63625c778525c1f368adbeb0}
+\hypertarget{class_r_s___atomic_entity_a7e35f48ae53da907f698e0e73887a1ca}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!move\-Endpoint@{move\-Endpoint}}
+\index{move\-Endpoint@{move\-Endpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{move\-Endpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::move\-Endpoint (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a7e35f48ae53da907f698e0e73887a1ca}
+
+
+Reimplemented in \hyperlink{class_r_s___ellipse_a86c58e1c1ccb5b0e8d15322fb811ceb1}{R\-S\-\_\-\-Ellipse}.
+
+\hypertarget{class_r_s___atomic_entity_ae25b3ef890c15bc0fcd8a9fa4308bdbc}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!move\-Selected\-Ref@{move\-Selected\-Ref}}
+\index{move\-Selected\-Ref@{move\-Selected\-Ref}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{move\-Selected\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::move\-Selected\-Ref (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{ref, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_ae25b3ef890c15bc0fcd8a9fa4308bdbc}
+\hypertarget{class_r_s___atomic_entity_ae09eb376e84a70a3bcf2367ed9397cca}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!move\-Startpoint@{move\-Startpoint}}
+\index{move\-Startpoint@{move\-Startpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{move\-Startpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::move\-Startpoint (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_ae09eb376e84a70a3bcf2367ed9397cca}
+
+
+Reimplemented in \hyperlink{class_r_s___ellipse_aba3d848fb8fe062b511eef9391e66806}{R\-S\-\_\-\-Ellipse}.
+
+\hypertarget{class_r_s___atomic_entity_a70264ad0d8a6ffac2af46e6be94e8f69}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!reverse@{reverse}}
+\index{reverse@{reverse}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{reverse}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::reverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a70264ad0d8a6ffac2af46e6be94e8f69}
+\hypertarget{class_r_s___atomic_entity_aca8cf2ec2643782c68cc9700417fec31}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!set\-Endpoint\-Selected@{set\-Endpoint\-Selected}}
+\index{set\-Endpoint\-Selected@{set\-Endpoint\-Selected}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{set\-Endpoint\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::set\-Endpoint\-Selected (
+\begin{DoxyParamCaption}
+\item[{bool}]{select}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_aca8cf2ec2643782c68cc9700417fec31}
+\hypertarget{class_r_s___atomic_entity_a3de4b75e6f1eb4bf419c3535db682654}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!set\-Startpoint\-Selected@{set\-Startpoint\-Selected}}
+\index{set\-Startpoint\-Selected@{set\-Startpoint\-Selected}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{set\-Startpoint\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::set\-Startpoint\-Selected (
+\begin{DoxyParamCaption}
+\item[{bool}]{select}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a3de4b75e6f1eb4bf419c3535db682654}
+\hypertarget{class_r_s___atomic_entity_a021db5f1757de41b2fe385d22bf2aaea}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!trim\-Endpoint@{trim\-Endpoint}}
+\index{trim\-Endpoint@{trim\-Endpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{trim\-Endpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::trim\-Endpoint (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a021db5f1757de41b2fe385d22bf2aaea}
+\hypertarget{class_r_s___atomic_entity_a33af8cca51e643cffbac55f3dbf9f670}{\index{R\-S\-\_\-\-Atomic\-Entity@{R\-S\-\_\-\-Atomic\-Entity}!trim\-Startpoint@{trim\-Startpoint}}
+\index{trim\-Startpoint@{trim\-Startpoint}!RS_AtomicEntity@{R\-S\-\_\-\-Atomic\-Entity}}
+\subsubsection[{trim\-Startpoint}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Atomic\-Entity\-::trim\-Startpoint (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___atomic_entity_a33af8cca51e643cffbac55f3dbf9f670}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__atomicentity_8h}{rs\-\_\-atomicentity.\-h}\end{DoxyCompactItemize}

@@ -35,10 +35,10 @@ class RS_Entity : public RS_Undoable {
 public:
 
 
-	RS_Entity(RS_EntityContainer* parent=NUL);
+	RS_Entity(RS_EntityContainer* parent=NULL);
 	virtual ~RS_Entity();
 
-	void init()
+	void init();
 	virtual void initId();
 
 	virtual RS_Entity* clone() = 0;

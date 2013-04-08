@@ -69,9 +69,14 @@ public:
 		return data.name;
 	}
 
+    /** @return the name of this layer. */
+    RS_String getName() const {
+        return data.name;
+    }
+
 	/** sets the default pen for this layer. */
 	void setPen(const RS_Pen& pen) {
-		return data.pen;
+		data.pen = pen;
 	}
 
 	/** return default pen for this layer. */

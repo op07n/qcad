@@ -1,0 +1,132 @@
+\hypertarget{class_r_s___document}{\section{R\-S\-\_\-\-Document Class Reference}
+\label{class_r_s___document}\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-document.\-h$>$}
+
+
+
+Inherits R\-S\-\_\-\-Entity\-Container, and R\-S\-\_\-\-Undo.
+
+
+
+Inherited by \hyperlink{class_r_s___block}{R\-S\-\_\-\-Block}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___document_ad4f493b59861514e06835437d83fae7e}{R\-S\-\_\-\-Document} (R\-S\-\_\-\-Entity\-Container $\ast$parent=N\-U\-L\-L)
+\item 
+virtual \hyperlink{class_r_s___document_a4cd7e1358090e012e2137838998cadf5}{$\sim$\-R\-S\-\_\-\-Document} ()
+\item 
+virtual R\-S\-\_\-\-Layer\-List $\ast$ \hyperlink{class_r_s___document_a2e5e7df8bf442fcf974b4b421474c425}{getlayer\-List} ()=0
+\item 
+virtual R\-S\-\_\-\-Block\-List $\ast$ \hyperlink{class_r_s___document_a03a5d6a959d006c53d003401ffd19980}{get\-Block\-List} ()=0
+\item 
+virtual void \hyperlink{class_r_s___document_a61e811dfa86c21f4da611e61629eb3ce}{new\-Doc} ()
+\item 
+virtual void \hyperlink{class_r_s___document_a63dba2c9a69e3144ba2c15ed54b4e67c}{save} ()=0
+\item 
+virtual bool \hyperlink{class_r_s___document_ae3a203c242ebef71e33d860508567b3a}{saveas} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&filename, \hyperlink{class_r_s2_ab876c252f8508d8947bb85cbbdd95b91}{R\-S2\-::\-Formattype} type)=0
+\item 
+virtual bool \hyperlink{class_r_s___document_a7acc1d006958a934ca14ff752ab2b731}{open} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&filename, \hyperlink{class_r_s2_ab876c252f8508d8947bb85cbbdd95b91}{R\-S2\-::\-Formattype} type)=0
+\item 
+virtual bool \hyperlink{class_r_s___document_a3993bf1dd82399ec1b34c358ff153dba}{is\-Document} () const 
+\item 
+virtual void \hyperlink{class_r_s___document_af8dfb197c811c4a0655499447d3e9a82}{remove\-Undoable} (\hyperlink{class_r_s___undoable}{R\-S\-\_\-\-Undoable} $\ast$u)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for documents. Documents can be either graphics or blocks and are typically shown in graphic views. Documents hold an active pen for drawing in the document, a file name and they know whether they have been modified or not. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___document_ad4f493b59861514e06835437d83fae7e}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}}
+\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{R\-S\-\_\-\-Document}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Document\-::\-R\-S\-\_\-\-Document (
+\begin{DoxyParamCaption}
+\item[{R\-S\-\_\-\-Entity\-Container $\ast$}]{parent = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___document_ad4f493b59861514e06835437d83fae7e}
+\hypertarget{class_r_s___document_a4cd7e1358090e012e2137838998cadf5}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!$\sim$\-R\-S\-\_\-\-Document@{$\sim$\-R\-S\-\_\-\-Document}}
+\index{$\sim$\-R\-S\-\_\-\-Document@{$\sim$\-R\-S\-\_\-\-Document}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{$\sim$\-R\-S\-\_\-\-Document}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Document\-::$\sim$\-R\-S\-\_\-\-Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___document_a4cd7e1358090e012e2137838998cadf5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___document_a03a5d6a959d006c53d003401ffd19980}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!get\-Block\-List@{get\-Block\-List}}
+\index{get\-Block\-List@{get\-Block\-List}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{get\-Block\-List}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Block\-List$\ast$ R\-S\-\_\-\-Document\-::get\-Block\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_r_s___document_a03a5d6a959d006c53d003401ffd19980}
+
+
+Implemented in \hyperlink{class_r_s___block_a42f298e8fbeae865268a115938ed18d9}{R\-S\-\_\-\-Block}.
+
+\hypertarget{class_r_s___document_a2e5e7df8bf442fcf974b4b421474c425}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!getlayer\-List@{getlayer\-List}}
+\index{getlayer\-List@{getlayer\-List}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{getlayer\-List}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Layer\-List$\ast$ R\-S\-\_\-\-Document\-::getlayer\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_r_s___document_a2e5e7df8bf442fcf974b4b421474c425}
+\hypertarget{class_r_s___document_a3993bf1dd82399ec1b34c358ff153dba}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!is\-Document@{is\-Document}}
+\index{is\-Document@{is\-Document}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{is\-Document}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Document\-::is\-Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___document_a3993bf1dd82399ec1b34c358ff153dba}
+\hypertarget{class_r_s___document_a61e811dfa86c21f4da611e61629eb3ce}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!new\-Doc@{new\-Doc}}
+\index{new\-Doc@{new\-Doc}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{new\-Doc}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Document\-::new\-Doc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___document_a61e811dfa86c21f4da611e61629eb3ce}
+\hypertarget{class_r_s___document_a7acc1d006958a934ca14ff752ab2b731}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!open@{open}}
+\index{open@{open}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Document\-::open (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{filename, }
+\item[{{\bf R\-S2\-::\-Formattype}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_r_s___document_a7acc1d006958a934ca14ff752ab2b731}
+\hypertarget{class_r_s___document_af8dfb197c811c4a0655499447d3e9a82}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!remove\-Undoable@{remove\-Undoable}}
+\index{remove\-Undoable@{remove\-Undoable}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{remove\-Undoable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Document\-::remove\-Undoable (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Undoable} $\ast$}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___document_af8dfb197c811c4a0655499447d3e9a82}
+\hypertarget{class_r_s___document_a63dba2c9a69e3144ba2c15ed54b4e67c}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!save@{save}}
+\index{save@{save}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Document\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_r_s___document_a63dba2c9a69e3144ba2c15ed54b4e67c}
+
+
+Implemented in \hyperlink{class_r_s___block_abbacf2514a8da85c26bb988e8e13f3f7}{R\-S\-\_\-\-Block}.
+
+\hypertarget{class_r_s___document_ae3a203c242ebef71e33d860508567b3a}{\index{R\-S\-\_\-\-Document@{R\-S\-\_\-\-Document}!saveas@{saveas}}
+\index{saveas@{saveas}!RS_Document@{R\-S\-\_\-\-Document}}
+\subsubsection[{saveas}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Document\-::saveas (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{filename, }
+\item[{{\bf R\-S2\-::\-Formattype}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_r_s___document_ae3a203c242ebef71e33d860508567b3a}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__document_8h}{rs\-\_\-document.\-h}\end{DoxyCompactItemize}

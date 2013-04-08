@@ -1,0 +1,136 @@
+\hypertarget{class_r_s___color}{\section{R\-S\-\_\-\-Color Class Reference}
+\label{class_r_s___color}\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-color.\-h$>$}
+
+
+
+Inherits Q\-Color, and \hyperlink{class_r_s___flags}{R\-S\-\_\-\-Flags}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___color_ab66dc940f91691c1042fdf66b233c202}{R\-S\-\_\-\-Color} ()
+\item 
+\hyperlink{class_r_s___color_a67cb642947852508b764fe24faf6941f}{R\-S\-\_\-\-Color} (int r, int g, int b)
+\item 
+\hyperlink{class_r_s___color_abbc6313f7a0ff964d2b026556492e96d}{R\-S\-\_\-\-Color} (const Q\-Color \&c)
+\item 
+\hyperlink{class_r_s___color_a3448d6fba8759e355de76c5c826e85d5}{R\-S\-\_\-\-Color} (const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c)
+\item 
+\hyperlink{class_r_s___color_afca132bc479e49fb149ee0c7fa4684f5}{R\-S\-\_\-\-Color} (unsigned int f)
+\item 
+\hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \hyperlink{class_r_s___color_af1afbe8fa974d959fc761e9050104775}{strip\-Flags} () const 
+\item 
+bool \hyperlink{class_r_s___color_a9ff19dd4aa42140e32801cf386fe16a6}{is\-By\-Layer} () const 
+\item 
+bool \hyperlink{class_r_s___color_a849e4525af328ac882e38d3e209bc1da}{is\-By\-Block} () const 
+\item 
+\hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \& \hyperlink{class_r_s___color_a23177e6321dabb0cbe5931d78b5a5542}{operator=} (const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c)
+\item 
+bool \hyperlink{class_r_s___color_a3b1f23149671afcdeb41dbd1e351ab36}{operator==} (const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{class_r_s___color_ac3c08dc2baed981d9a8316a00336b5a7}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Color class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___color_ab66dc940f91691c1042fdf66b233c202}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{R\-S\-\_\-\-Color}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Color\-::\-R\-S\-\_\-\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_ab66dc940f91691c1042fdf66b233c202}
+\hypertarget{class_r_s___color_a67cb642947852508b764fe24faf6941f}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{R\-S\-\_\-\-Color}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Color\-::\-R\-S\-\_\-\-Color (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a67cb642947852508b764fe24faf6941f}
+\hypertarget{class_r_s___color_abbc6313f7a0ff964d2b026556492e96d}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{R\-S\-\_\-\-Color}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Color\-::\-R\-S\-\_\-\-Color (
+\begin{DoxyParamCaption}
+\item[{const Q\-Color \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_abbc6313f7a0ff964d2b026556492e96d}
+\hypertarget{class_r_s___color_a3448d6fba8759e355de76c5c826e85d5}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{R\-S\-\_\-\-Color}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Color\-::\-R\-S\-\_\-\-Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a3448d6fba8759e355de76c5c826e85d5}
+\hypertarget{class_r_s___color_afca132bc479e49fb149ee0c7fa4684f5}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}}
+\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{R\-S\-\_\-\-Color}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Color\-::\-R\-S\-\_\-\-Color (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_afca132bc479e49fb149ee0c7fa4684f5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___color_a849e4525af328ac882e38d3e209bc1da}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!is\-By\-Block@{is\-By\-Block}}
+\index{is\-By\-Block@{is\-By\-Block}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{is\-By\-Block}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Color\-::is\-By\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a849e4525af328ac882e38d3e209bc1da}
+return true if the color is defined by block \hypertarget{class_r_s___color_a9ff19dd4aa42140e32801cf386fe16a6}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!is\-By\-Layer@{is\-By\-Layer}}
+\index{is\-By\-Layer@{is\-By\-Layer}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{is\-By\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Color\-::is\-By\-Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a9ff19dd4aa42140e32801cf386fe16a6}
+return true if the color is defined by layer. \hypertarget{class_r_s___color_a23177e6321dabb0cbe5931d78b5a5542}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!operator=@{operator=}}
+\index{operator=@{operator=}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Color}\& R\-S\-\_\-\-Color\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a23177e6321dabb0cbe5931d78b5a5542}
+\hypertarget{class_r_s___color_a3b1f23149671afcdeb41dbd1e351ab36}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!operator==@{operator==}}
+\index{operator==@{operator==}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Color\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_a3b1f23149671afcdeb41dbd1e351ab36}
+\hypertarget{class_r_s___color_af1afbe8fa974d959fc761e9050104775}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!strip\-Flags@{strip\-Flags}}
+\index{strip\-Flags@{strip\-Flags}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{strip\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Color} R\-S\-\_\-\-Color\-::strip\-Flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___color_af1afbe8fa974d959fc761e9050104775}
+return A copy of this color withour flags. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_r_s___color_ac3c08dc2baed981d9a8316a00336b5a7}{\index{R\-S\-\_\-\-Color@{R\-S\-\_\-\-Color}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!RS_Color@{R\-S\-\_\-\-Color}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___color_ac3c08dc2baed981d9a8316a00336b5a7}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__color_8h}{rs\-\_\-color.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,371 @@
+\hypertarget{class_r_s___vector}{\section{R\-S\-\_\-\-Vector Class Reference}
+\label{class_r_s___vector}\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-vector.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___vector_aeb0f0df770b60e94c8ab65304749943f}{R\-S\-\_\-\-Vector} ()
+\item 
+\hyperlink{class_r_s___vector_a48ba2b83dc071d8c779d2e3d3ae6b3a2}{R\-S\-\_\-\-Vector} (double vx, double vy, double vz=0.\-0)
+\item 
+\hyperlink{class_r_s___vector_a0bc31448ae9fc7f5e8ab41a86fe41e89}{R\-S\-\_\-\-Vector} (bool \hyperlink{class_r_s___vector_a218a279eef9451516eb2f35473471f06}{valid})
+\item 
+\hyperlink{class_r_s___vector_ac84e1fb6316457064342312fe232caa7}{$\sim$\-R\-S\-\_\-\-Vector} ()
+\item 
+void \hyperlink{class_r_s___vector_ab83aa1475e39334092f1fe5043905787}{set} (double vx, double vy, double vz=0.\-0)
+\item 
+void \hyperlink{class_r_s___vector_a97ca1b03bb2c3738cec5b86575ef6bf5}{set\-Polar} (double radius, double \hyperlink{class_r_s___vector_a7fd6801a576580f279353d0fd9d40313}{angle})
+\item 
+double \hyperlink{class_r_s___vector_ac6e5c85479562f7affae3084db96b155}{distance\-To} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\item 
+double \hyperlink{class_r_s___vector_a7fd6801a576580f279353d0fd9d40313}{angle} () const 
+\item 
+double \hyperlink{class_r_s___vector_adc2b3700e0310cd24e38824d890979f1}{angle\-To} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\item 
+double \hyperlink{class_r_s___vector_a641f6f702e187ff7473fbe48af9a01aa}{magnitude} () const 
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_af16d3508d470f965c0cc5f48e306e7c1}{lerp} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v, double t) const 
+\item 
+bool \hyperlink{class_r_s___vector_a6c19c2c78a111944e2535adcae75136d}{is\-In\-Window} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&first\-Corner, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&second\-Corner)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a3a360bebed12fa83c947c44966c9fe84}{move} (\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} offset)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_abc4bb36b125f4ce256d2deb64111671c}{rotate} (double ang)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a973518035d018fed0158ead562353fe9}{rotate} (\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} center, double ang)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_abc5d8ce9a4c95c8344d0ea050d674554}{scale} (\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} factor)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a6dbe57df6193853149e87b7d9d284ac3}{scale} (\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} center, \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} factor)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a9a4c0805bfd0b5832cb39b194f94fcc1}{mirror} (\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} axis\-Point, \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} axis\-Point2)
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a91c68dba1205738490da545d3a425b05}{operator+} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a18563367cac322844e732916b7bae69a}{operator-\/} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_a38fa35a11fde7d3264c99921d4098894}{operator$\ast$} (double s) const 
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_ac7bf961daf12d9401ac8a666ebb1497e}{operator/} (double s) const 
+\item 
+void \hyperlink{class_r_s___vector_a10f89437491fcd25a980a63ce50f1755}{operator+=} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v)
+\item 
+void \hyperlink{class_r_s___vector_a22412abd21eeb0efb7449ab15e55812e}{operator-\/=} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v)
+\item 
+void \hyperlink{class_r_s___vector_a3e5be689e9b8474eab7b6b3049eeafa6}{operator$\ast$=} (double s)
+\item 
+bool \hyperlink{class_r_s___vector_abe3cbb071537621e39da1acdb3e33b47}{operator==} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\item 
+bool \hyperlink{class_r_s___vector_a12bfb0e59793801580c9d49cf0cc6801}{operator!=} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_afe4b62f61178fbb7bb7df6992bcaf8fd}{minimum} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v1, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v2)
+\item 
+static \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_ab7a0ecea9fe56ee20f19be07602fdbb7}{maximum} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v1, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v2)
+\item 
+static \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___vector_af3b9647c346417f1a2efb487d20db0b9}{cross\-P} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v1, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v2)
+\item 
+static double \hyperlink{class_r_s___vector_ab2e190b72ae65bbdb30ffe1b3685bd2b}{dot\-P} (const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v1, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v2)
+\item 
+static bool \hyperlink{class_r_s___vector_a4a976b78f67964e2c0c4373be3e3242b}{test} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_r_s___vector_a81383ed1e6f744095698592fb7a4da87}{x}
+\item 
+double \hyperlink{class_r_s___vector_afb6a5512921abeaa92b9b7a1161a7657}{y}
+\item 
+double \hyperlink{class_r_s___vector_ac82be7d44c6e2848b6391fe22657ee74}{z}
+\item 
+bool \hyperlink{class_r_s___vector_a218a279eef9451516eb2f35473471f06}{valid}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{class_r_s___vector_a8929105d6fd14cd1727b9262f1b1e632}{operator$<$$<$} (std\-::ostream \&, const \hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represent a 3\-D vector(x/y/z) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___vector_aeb0f0df770b60e94c8ab65304749943f}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}}
+\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{R\-S\-\_\-\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Vector\-::\-R\-S\-\_\-\-Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_aeb0f0df770b60e94c8ab65304749943f}
+\hypertarget{class_r_s___vector_a48ba2b83dc071d8c779d2e3d3ae6b3a2}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}}
+\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{R\-S\-\_\-\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Vector\-::\-R\-S\-\_\-\-Vector (
+\begin{DoxyParamCaption}
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a48ba2b83dc071d8c779d2e3d3ae6b3a2}
+\hypertarget{class_r_s___vector_a0bc31448ae9fc7f5e8ab41a86fe41e89}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}}
+\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{R\-S\-\_\-\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Vector\-::\-R\-S\-\_\-\-Vector (
+\begin{DoxyParamCaption}
+\item[{bool}]{valid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_r_s___vector_a0bc31448ae9fc7f5e8ab41a86fe41e89}
+\hypertarget{class_r_s___vector_ac84e1fb6316457064342312fe232caa7}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!$\sim$\-R\-S\-\_\-\-Vector@{$\sim$\-R\-S\-\_\-\-Vector}}
+\index{$\sim$\-R\-S\-\_\-\-Vector@{$\sim$\-R\-S\-\_\-\-Vector}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{$\sim$\-R\-S\-\_\-\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Vector\-::$\sim$\-R\-S\-\_\-\-Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_ac84e1fb6316457064342312fe232caa7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___vector_a7fd6801a576580f279353d0fd9d40313}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!angle@{angle}}
+\index{angle@{angle}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_a7fd6801a576580f279353d0fd9d40313}
+\hypertarget{class_r_s___vector_adc2b3700e0310cd24e38824d890979f1}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!angle\-To@{angle\-To}}
+\index{angle\-To@{angle\-To}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{angle\-To}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::angle\-To (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_adc2b3700e0310cd24e38824d890979f1}
+\hypertarget{class_r_s___vector_af3b9647c346417f1a2efb487d20db0b9}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!cross\-P@{cross\-P}}
+\index{cross\-P@{cross\-P}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{cross\-P}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::cross\-P (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v1, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___vector_af3b9647c346417f1a2efb487d20db0b9}
+\hypertarget{class_r_s___vector_ac6e5c85479562f7affae3084db96b155}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!distance\-To@{distance\-To}}
+\index{distance\-To@{distance\-To}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{distance\-To}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::distance\-To (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_ac6e5c85479562f7affae3084db96b155}
+\hypertarget{class_r_s___vector_ab2e190b72ae65bbdb30ffe1b3685bd2b}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!dot\-P@{dot\-P}}
+\index{dot\-P@{dot\-P}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{dot\-P}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Vector\-::dot\-P (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v1, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___vector_ab2e190b72ae65bbdb30ffe1b3685bd2b}
+\hypertarget{class_r_s___vector_a6c19c2c78a111944e2535adcae75136d}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!is\-In\-Window@{is\-In\-Window}}
+\index{is\-In\-Window@{is\-In\-Window}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{is\-In\-Window}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Vector\-::is\-In\-Window (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{first\-Corner, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{second\-Corner}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a6c19c2c78a111944e2535adcae75136d}
+\hypertarget{class_r_s___vector_af16d3508d470f965c0cc5f48e306e7c1}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!lerp@{lerp}}
+\index{lerp@{lerp}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::lerp (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_af16d3508d470f965c0cc5f48e306e7c1}
+\hypertarget{class_r_s___vector_a641f6f702e187ff7473fbe48af9a01aa}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{magnitude}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_a641f6f702e187ff7473fbe48af9a01aa}
+\hypertarget{class_r_s___vector_ab7a0ecea9fe56ee20f19be07602fdbb7}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!maximum@{maximum}}
+\index{maximum@{maximum}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{maximum}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::maximum (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v1, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___vector_ab7a0ecea9fe56ee20f19be07602fdbb7}
+\hypertarget{class_r_s___vector_afe4b62f61178fbb7bb7df6992bcaf8fd}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!minimum@{minimum}}
+\index{minimum@{minimum}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{minimum}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::minimum (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v1, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___vector_afe4b62f61178fbb7bb7df6992bcaf8fd}
+\hypertarget{class_r_s___vector_a9a4c0805bfd0b5832cb39b194f94fcc1}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!mirror@{mirror}}
+\index{mirror@{mirror}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{mirror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::mirror (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Vector}}]{axis\-Point, }
+\item[{{\bf R\-S\-\_\-\-Vector}}]{axis\-Point2}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a9a4c0805bfd0b5832cb39b194f94fcc1}
+\hypertarget{class_r_s___vector_a3a360bebed12fa83c947c44966c9fe84}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!move@{move}}
+\index{move@{move}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::move (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Vector}}]{offset}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a3a360bebed12fa83c947c44966c9fe84}
+\hypertarget{class_r_s___vector_a12bfb0e59793801580c9d49cf0cc6801}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Vector\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___vector_a12bfb0e59793801580c9d49cf0cc6801}
+\hypertarget{class_r_s___vector_a38fa35a11fde7d3264c99921d4098894}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{s}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_a38fa35a11fde7d3264c99921d4098894}
+\hypertarget{class_r_s___vector_a3e5be689e9b8474eab7b6b3049eeafa6}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Vector\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a3e5be689e9b8474eab7b6b3049eeafa6}
+\hypertarget{class_r_s___vector_a91c68dba1205738490da545d3a425b05}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_a91c68dba1205738490da545d3a425b05}
+\hypertarget{class_r_s___vector_a10f89437491fcd25a980a63ce50f1755}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Vector\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a10f89437491fcd25a980a63ce50f1755}
+\hypertarget{class_r_s___vector_a18563367cac322844e732916b7bae69a}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_a18563367cac322844e732916b7bae69a}
+\hypertarget{class_r_s___vector_a22412abd21eeb0efb7449ab15e55812e}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Vector\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a22412abd21eeb0efb7449ab15e55812e}
+\hypertarget{class_r_s___vector_ac7bf961daf12d9401ac8a666ebb1497e}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator/@{operator/}}
+\index{operator/@{operator/}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{double}]{s}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_ac7bf961daf12d9401ac8a666ebb1497e}
+\hypertarget{class_r_s___vector_abe3cbb071537621e39da1acdb3e33b47}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator==@{operator==}}
+\index{operator==@{operator==}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Vector\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{class_r_s___vector_abe3cbb071537621e39da1acdb3e33b47}
+\hypertarget{class_r_s___vector_abc4bb36b125f4ce256d2deb64111671c}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!rotate@{rotate}}
+\index{rotate@{rotate}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::rotate (
+\begin{DoxyParamCaption}
+\item[{double}]{ang}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_abc4bb36b125f4ce256d2deb64111671c}
+\hypertarget{class_r_s___vector_a973518035d018fed0158ead562353fe9}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!rotate@{rotate}}
+\index{rotate@{rotate}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::rotate (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Vector}}]{center, }
+\item[{double}]{ang}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a973518035d018fed0158ead562353fe9}
+\hypertarget{class_r_s___vector_abc5d8ce9a4c95c8344d0ea050d674554}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!scale@{scale}}
+\index{scale@{scale}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::scale (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Vector}}]{factor}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_abc5d8ce9a4c95c8344d0ea050d674554}
+\hypertarget{class_r_s___vector_a6dbe57df6193853149e87b7d9d284ac3}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!scale@{scale}}
+\index{scale@{scale}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Vector\-::scale (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S\-\_\-\-Vector}}]{center, }
+\item[{{\bf R\-S\-\_\-\-Vector}}]{factor}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a6dbe57df6193853149e87b7d9d284ac3}
+\hypertarget{class_r_s___vector_ab83aa1475e39334092f1fe5043905787}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!set@{set}}
+\index{set@{set}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Vector\-::set (
+\begin{DoxyParamCaption}
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_ab83aa1475e39334092f1fe5043905787}
+\hypertarget{class_r_s___vector_a97ca1b03bb2c3738cec5b86575ef6bf5}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!set\-Polar@{set\-Polar}}
+\index{set\-Polar@{set\-Polar}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{set\-Polar}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Vector\-::set\-Polar (
+\begin{DoxyParamCaption}
+\item[{double}]{radius, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___vector_a97ca1b03bb2c3738cec5b86575ef6bf5}
+\hypertarget{class_r_s___vector_a4a976b78f67964e2c0c4373be3e3242b}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!test@{test}}
+\index{test@{test}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{test}]{\setlength{\rightskip}{0pt plus 5cm}static bool R\-S\-\_\-\-Vector\-::test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___vector_a4a976b78f67964e2c0c4373be3e3242b}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_r_s___vector_a8929105d6fd14cd1727b9262f1b1e632}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{, }
+\item[{const {\bf R\-S\-\_\-\-Vector} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___vector_a8929105d6fd14cd1727b9262f1b1e632}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_r_s___vector_a218a279eef9451516eb2f35473471f06}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!valid@{valid}}
+\index{valid@{valid}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Vector\-::valid}}\label{class_r_s___vector_a218a279eef9451516eb2f35473471f06}
+\hypertarget{class_r_s___vector_a81383ed1e6f744095698592fb7a4da87}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!x@{x}}
+\index{x@{x}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::x}}\label{class_r_s___vector_a81383ed1e6f744095698592fb7a4da87}
+\hypertarget{class_r_s___vector_afb6a5512921abeaa92b9b7a1161a7657}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!y@{y}}
+\index{y@{y}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::y}}\label{class_r_s___vector_afb6a5512921abeaa92b9b7a1161a7657}
+\hypertarget{class_r_s___vector_ac82be7d44c6e2848b6391fe22657ee74}{\index{R\-S\-\_\-\-Vector@{R\-S\-\_\-\-Vector}!z@{z}}
+\index{z@{z}!RS_Vector@{R\-S\-\_\-\-Vector}}
+\subsubsection[{z}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Vector\-::z}}\label{class_r_s___vector_ac82be7d44c6e2848b6391fe22657ee74}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__vector_8h}{rs\-\_\-vector.\-h}\end{DoxyCompactItemize}

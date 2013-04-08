@@ -1,0 +1,212 @@
+\hypertarget{class_r_s___block}{\section{R\-S\-\_\-\-Block Class Reference}
+\label{class_r_s___block}\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-block.\-h$>$}
+
+
+
+Inherits \hyperlink{class_r_s___document}{R\-S\-\_\-\-Document}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___block_a6b07340f917f5fc95285761d3d46c391}{R\-S\-\_\-\-Block} (R\-S\-\_\-\-Entity\-Container $\ast$parent, const \hyperlink{class_r_s___block_data}{R\-S\-\_\-\-Block\-Data} \&d)
+\item 
+virtual \hyperlink{class_r_s___block_a07ddcb46d07ffc3ea95ef5cfc4df2b08}{$\sim$\-R\-S\-\_\-\-Block} ()
+\item 
+virtual \hyperlink{class_r_s___entity}{R\-S\-\_\-\-Entity} $\ast$ \hyperlink{class_r_s___block_ad5cd65d01b7af57b3635d1d38c3175df}{clone} ()
+\item 
+virtual \hyperlink{class_r_s2_a8f26d1b981e1e85cff16738b43337e6a}{R\-S2\-::\-Entity\-Type} \hyperlink{class_r_s___block_acfe58f363ff7e72ac42d51dbfd3f0b71}{rtti} () const 
+\item 
+\hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \hyperlink{class_r_s___block_a52af2fe1df01e2f10377c9bbdbfa671f}{get\-Name} () const 
+\item 
+\hyperlink{class_r_s___vector}{R\-S\-\_\-\-Vector} \hyperlink{class_r_s___block_aa4f776303c15ed622bba648945e42738}{get\-Base\-Point} () const 
+\item 
+virtual R\-S\-\_\-\-Layer\-List $\ast$ \hyperlink{class_r_s___block_a7f1df44875a4cf50f391636658704dd8}{get\-Layer\-List} ()
+\item 
+virtual Rs\-\_\-\-Block\-List $\ast$ \hyperlink{class_r_s___block_a42f298e8fbeae865268a115938ed18d9}{get\-Block\-List} ()
+\item 
+virtual bool \hyperlink{class_r_s___block_abbacf2514a8da85c26bb988e8e13f3f7}{save} ()
+\item 
+virtual bool \hyperlink{class_r_s___block_ae3272406d750ba47cac95a1411d96092}{save\-As} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&filename, R\-S2\-::\-Forma\-Type type)
+\item 
+virtual bool \hyperlink{class_r_s___block_a04ffb140e3d5c4a943c9de44575c36ba}{open} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&, R\-S2\-::\-Format\-Type)
+\item 
+void \hyperlink{class_r_s___block_a048d319f67a2407fff1a68ce1bfd627d}{set\-Name} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&n)
+\item 
+bool \hyperlink{class_r_s___block_ac43440d111abe6c1cc9ddae9b0f5727d}{is\-Frozen} () const 
+\item 
+void \hyperlink{class_r_s___block_ad79ccca26afa6e02dea92bcd165eb360}{toggle} ()
+\item 
+void \hyperlink{class_r_s___block_af5ef165dda427fe7b87aa4bb0e125bcf}{freeze} (bool freeze)
+\item 
+virtual void \hyperlink{class_r_s___block_a8eb16a6072c651f59caa7725ea6e2331}{set\-Modified} (bool m)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___block_data}{R\-S\-\_\-\-Block\-Data} \hyperlink{class_r_s___block_ae9303e76ea74cbf42f95ba9a1e476b1b}{data}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_r_s___block_af76093eaee24d0094ffbb739efcff4e1}{R\-S\-\_\-\-Block\-List}
+\item 
+std\-::ostream \& \hyperlink{class_r_s___block_a929f76719c4bd8106f359c10c45fb9fe}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_r_s___block}{R\-S\-\_\-\-Block} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___block_a6b07340f917f5fc95285761d3d46c391}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}}
+\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{R\-S\-\_\-\-Block}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Block\-::\-R\-S\-\_\-\-Block (
+\begin{DoxyParamCaption}
+\item[{R\-S\-\_\-\-Entity\-Container $\ast$}]{parent, }
+\item[{const {\bf R\-S\-\_\-\-Block\-Data} \&}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_r_s___block_a6b07340f917f5fc95285761d3d46c391}
+\hypertarget{class_r_s___block_a07ddcb46d07ffc3ea95ef5cfc4df2b08}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!$\sim$\-R\-S\-\_\-\-Block@{$\sim$\-R\-S\-\_\-\-Block}}
+\index{$\sim$\-R\-S\-\_\-\-Block@{$\sim$\-R\-S\-\_\-\-Block}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{$\sim$\-R\-S\-\_\-\-Block}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Block\-::$\sim$\-R\-S\-\_\-\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_a07ddcb46d07ffc3ea95ef5cfc4df2b08}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___block_ad5cd65d01b7af57b3635d1d38c3175df}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!clone@{clone}}
+\index{clone@{clone}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf R\-S\-\_\-\-Entity}$\ast$ R\-S\-\_\-\-Block\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_ad5cd65d01b7af57b3635d1d38c3175df}
+\hypertarget{class_r_s___block_af5ef165dda427fe7b87aa4bb0e125bcf}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!freeze@{freeze}}
+\index{freeze@{freeze}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{freeze}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Block\-::freeze (
+\begin{DoxyParamCaption}
+\item[{bool}]{freeze}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_af5ef165dda427fe7b87aa4bb0e125bcf}
+\hypertarget{class_r_s___block_aa4f776303c15ed622bba648945e42738}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!get\-Base\-Point@{get\-Base\-Point}}
+\index{get\-Base\-Point@{get\-Base\-Point}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{get\-Base\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Vector} R\-S\-\_\-\-Block\-::get\-Base\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_aa4f776303c15ed622bba648945e42738}
+\hypertarget{class_r_s___block_a42f298e8fbeae865268a115938ed18d9}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!get\-Block\-List@{get\-Block\-List}}
+\index{get\-Block\-List@{get\-Block\-List}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{get\-Block\-List}]{\setlength{\rightskip}{0pt plus 5cm}virtual Rs\-\_\-\-Block\-List$\ast$ R\-S\-\_\-\-Block\-::get\-Block\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_a42f298e8fbeae865268a115938ed18d9}
+
+
+Implements \hyperlink{class_r_s___document_a03a5d6a959d006c53d003401ffd19980}{R\-S\-\_\-\-Document}.
+
+\hypertarget{class_r_s___block_a7f1df44875a4cf50f391636658704dd8}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!get\-Layer\-List@{get\-Layer\-List}}
+\index{get\-Layer\-List@{get\-Layer\-List}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{get\-Layer\-List}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Layer\-List$\ast$ R\-S\-\_\-\-Block\-::get\-Layer\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_a7f1df44875a4cf50f391636658704dd8}
+\hypertarget{class_r_s___block_a52af2fe1df01e2f10377c9bbdbfa671f}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-String} R\-S\-\_\-\-Block\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_a52af2fe1df01e2f10377c9bbdbfa671f}
+\hypertarget{class_r_s___block_ac43440d111abe6c1cc9ddae9b0f5727d}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!is\-Frozen@{is\-Frozen}}
+\index{is\-Frozen@{is\-Frozen}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{is\-Frozen}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Block\-::is\-Frozen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_ac43440d111abe6c1cc9ddae9b0f5727d}
+\hypertarget{class_r_s___block_a04ffb140e3d5c4a943c9de44575c36ba}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!open@{open}}
+\index{open@{open}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Block\-::open (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{, }
+\item[{R\-S2\-::\-Format\-Type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___block_a04ffb140e3d5c4a943c9de44575c36ba}
+\hypertarget{class_r_s___block_acfe58f363ff7e72ac42d51dbfd3f0b71}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!rtti@{rtti}}
+\index{rtti@{rtti}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{rtti}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf R\-S2\-::\-Entity\-Type} R\-S\-\_\-\-Block\-::rtti (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___block_acfe58f363ff7e72ac42d51dbfd3f0b71}
+\hypertarget{class_r_s___block_abbacf2514a8da85c26bb988e8e13f3f7}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!save@{save}}
+\index{save@{save}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Block\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_abbacf2514a8da85c26bb988e8e13f3f7}
+
+
+Implements \hyperlink{class_r_s___document_a63dba2c9a69e3144ba2c15ed54b4e67c}{R\-S\-\_\-\-Document}.
+
+\hypertarget{class_r_s___block_ae3272406d750ba47cac95a1411d96092}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!save\-As@{save\-As}}
+\index{save\-As@{save\-As}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{save\-As}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool R\-S\-\_\-\-Block\-::save\-As (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{filename, }
+\item[{R\-S2\-::\-Forma\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_ae3272406d750ba47cac95a1411d96092}
+\hypertarget{class_r_s___block_a8eb16a6072c651f59caa7725ea6e2331}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!set\-Modified@{set\-Modified}}
+\index{set\-Modified@{set\-Modified}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{set\-Modified}]{\setlength{\rightskip}{0pt plus 5cm}virtual void R\-S\-\_\-\-Block\-::set\-Modified (
+\begin{DoxyParamCaption}
+\item[{bool}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_r_s___block_a8eb16a6072c651f59caa7725ea6e2331}
+\hypertarget{class_r_s___block_a048d319f67a2407fff1a68ce1bfd627d}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Block\-::set\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_a048d319f67a2407fff1a68ce1bfd627d}
+\hypertarget{class_r_s___block_ad79ccca26afa6e02dea92bcd165eb360}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!toggle@{toggle}}
+\index{toggle@{toggle}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{toggle}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Block\-::toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___block_ad79ccca26afa6e02dea92bcd165eb360}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_r_s___block_a929f76719c4bd8106f359c10c45fb9fe}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{const {\bf R\-S\-\_\-\-Block} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___block_a929f76719c4bd8106f359c10c45fb9fe}
+\hypertarget{class_r_s___block_af76093eaee24d0094ffbb739efcff4e1}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!R\-S\-\_\-\-Block\-List@{R\-S\-\_\-\-Block\-List}}
+\index{R\-S\-\_\-\-Block\-List@{R\-S\-\_\-\-Block\-List}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{R\-S\-\_\-\-Block\-List}]{\setlength{\rightskip}{0pt plus 5cm}friend class R\-S\-\_\-\-Block\-List\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___block_af76093eaee24d0094ffbb739efcff4e1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_r_s___block_ae9303e76ea74cbf42f95ba9a1e476b1b}{\index{R\-S\-\_\-\-Block@{R\-S\-\_\-\-Block}!data@{data}}
+\index{data@{data}!RS_Block@{R\-S\-\_\-\-Block}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Block\-Data} R\-S\-\_\-\-Block\-::data\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_r_s___block_ae9303e76ea74cbf42f95ba9a1e476b1b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__block_8h}{rs\-\_\-block.\-h}\end{DoxyCompactItemize}

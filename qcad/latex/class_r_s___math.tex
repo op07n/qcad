@@ -1,0 +1,196 @@
+\hypertarget{class_r_s___math}{\section{R\-S\-\_\-\-Math Class Reference}
+\label{class_r_s___math}\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-math.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_r_s___math_ae7695e522d0318e17dd2fc21b3e3f99c}{round} (double v)
+\item 
+static double \hyperlink{class_r_s___math_a9b10d1b49138c3f933c85a94d249a72d}{pow} (double x, double y)
+\item 
+static double \hyperlink{class_r_s___math_ae61afb84e2cb74500e424d99c93fe7d2}{rad2deg} (double a)
+\item 
+static double \hyperlink{class_r_s___math_aed4dc3f4ff3ac2a3e7806b4d5fe3567e}{deg2rad} (double a)
+\item 
+static double \hyperlink{class_r_s___math_ab9a3999134521f753316eb7daa497410}{rad2gra} (double a)
+\item 
+static int \hyperlink{class_r_s___math_ae32b9dcb00179eb7217b4f7623ef6386}{find\-G\-C\-D} (int a, int b)
+\item 
+static bool \hyperlink{class_r_s___math_a58f104087961a23ade3aa3f3871681db}{is\-Angle\-Between} (double a, double a1, double a2, bool reversed)
+\item 
+static double \hyperlink{class_r_s___math_a046f3f94c15c641370629145d1406dc5}{correct\-Angle} (double a)
+\item 
+static double \hyperlink{class_r_s___math_a187bcc2597095880b0340f8898932850}{get\-Angle\-Difference} (double a1, double a2)
+\item 
+static double \hyperlink{class_r_s___math_a95bc8115bfccb1b37be5edaac0e5c667}{make\-Angle\-Readable} (double angle, bool readable=true, bool $\ast$corrected=N\-U\-L\-L)
+\item 
+static bool \hyperlink{class_r_s___math_a88e259f58e3d468ecad07b7ca30aebb1}{is\-Angle\-Readable} (double angle)
+\item 
+static bool \hyperlink{class_r_s___math_a975388f1c647c850bf6fe95564bc3e0d}{is\-Same\-Direction} (double dir1, double dir2, double tol)
+\item 
+static double \hyperlink{class_r_s___math_afaec7eb89cf50e3481f2970df89d9ae7}{eval} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&expr, double def=0.\-0)
+\item 
+static bool \hyperlink{class_r_s___math_ace7603b3950b128a1cef359d2e22ff9e}{cmp\-Double} (double v1, double v2, double tol=0.\-001)
+\item 
+static double \hyperlink{class_r_s___math_a886d2291d3752bda45b3d20da597cb26}{eval} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&expr, bool $\ast$ok)
+\item 
+static \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \hyperlink{class_r_s___math_a5a03f2598d98c46aa38fce7a6e928ac9}{double\-To\-String} (double value, double prec)
+\item 
+static \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \hyperlink{class_r_s___math_a1ba8580f960de5e63d57b3693784f890}{double\-To\-String} (double value, int prec)
+\item 
+static void \hyperlink{class_r_s___math_a77104690912de30774c7daa41fa52621}{test} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___math_ace7603b3950b128a1cef359d2e22ff9e}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!cmp\-Double@{cmp\-Double}}
+\index{cmp\-Double@{cmp\-Double}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{cmp\-Double}]{\setlength{\rightskip}{0pt plus 5cm}static bool R\-S\-\_\-\-Math\-::cmp\-Double (
+\begin{DoxyParamCaption}
+\item[{double}]{v1, }
+\item[{double}]{v2, }
+\item[{double}]{tol = {\ttfamily 0.001}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_ace7603b3950b128a1cef359d2e22ff9e}
+\hypertarget{class_r_s___math_a046f3f94c15c641370629145d1406dc5}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!correct\-Angle@{correct\-Angle}}
+\index{correct\-Angle@{correct\-Angle}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{correct\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::correct\-Angle (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a046f3f94c15c641370629145d1406dc5}
+\hypertarget{class_r_s___math_aed4dc3f4ff3ac2a3e7806b4d5fe3567e}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{deg2rad}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::deg2rad (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_aed4dc3f4ff3ac2a3e7806b4d5fe3567e}
+\hypertarget{class_r_s___math_a5a03f2598d98c46aa38fce7a6e928ac9}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!double\-To\-String@{double\-To\-String}}
+\index{double\-To\-String@{double\-To\-String}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{double\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf R\-S\-\_\-\-String} R\-S\-\_\-\-Math\-::double\-To\-String (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{double}]{prec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a5a03f2598d98c46aa38fce7a6e928ac9}
+\hypertarget{class_r_s___math_a1ba8580f960de5e63d57b3693784f890}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!double\-To\-String@{double\-To\-String}}
+\index{double\-To\-String@{double\-To\-String}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{double\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf R\-S\-\_\-\-String} R\-S\-\_\-\-Math\-::double\-To\-String (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{int}]{prec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a1ba8580f960de5e63d57b3693784f890}
+\hypertarget{class_r_s___math_afaec7eb89cf50e3481f2970df89d9ae7}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!eval@{eval}}
+\index{eval@{eval}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{expr, }
+\item[{double}]{def = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_afaec7eb89cf50e3481f2970df89d9ae7}
+\hypertarget{class_r_s___math_a886d2291d3752bda45b3d20da597cb26}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!eval@{eval}}
+\index{eval@{eval}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{expr, }
+\item[{bool $\ast$}]{ok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_r_s___math_a886d2291d3752bda45b3d20da597cb26}
+\hypertarget{class_r_s___math_ae32b9dcb00179eb7217b4f7623ef6386}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!find\-G\-C\-D@{find\-G\-C\-D}}
+\index{find\-G\-C\-D@{find\-G\-C\-D}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{find\-G\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}static int R\-S\-\_\-\-Math\-::find\-G\-C\-D (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_ae32b9dcb00179eb7217b4f7623ef6386}
+\hypertarget{class_r_s___math_a187bcc2597095880b0340f8898932850}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!get\-Angle\-Difference@{get\-Angle\-Difference}}
+\index{get\-Angle\-Difference@{get\-Angle\-Difference}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{get\-Angle\-Difference}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::get\-Angle\-Difference (
+\begin{DoxyParamCaption}
+\item[{double}]{a1, }
+\item[{double}]{a2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a187bcc2597095880b0340f8898932850}
+\hypertarget{class_r_s___math_a58f104087961a23ade3aa3f3871681db}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!is\-Angle\-Between@{is\-Angle\-Between}}
+\index{is\-Angle\-Between@{is\-Angle\-Between}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{is\-Angle\-Between}]{\setlength{\rightskip}{0pt plus 5cm}static bool R\-S\-\_\-\-Math\-::is\-Angle\-Between (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{a1, }
+\item[{double}]{a2, }
+\item[{bool}]{reversed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a58f104087961a23ade3aa3f3871681db}
+\hypertarget{class_r_s___math_a88e259f58e3d468ecad07b7ca30aebb1}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!is\-Angle\-Readable@{is\-Angle\-Readable}}
+\index{is\-Angle\-Readable@{is\-Angle\-Readable}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{is\-Angle\-Readable}]{\setlength{\rightskip}{0pt plus 5cm}static bool R\-S\-\_\-\-Math\-::is\-Angle\-Readable (
+\begin{DoxyParamCaption}
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a88e259f58e3d468ecad07b7ca30aebb1}
+\hypertarget{class_r_s___math_a975388f1c647c850bf6fe95564bc3e0d}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!is\-Same\-Direction@{is\-Same\-Direction}}
+\index{is\-Same\-Direction@{is\-Same\-Direction}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{is\-Same\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}static bool R\-S\-\_\-\-Math\-::is\-Same\-Direction (
+\begin{DoxyParamCaption}
+\item[{double}]{dir1, }
+\item[{double}]{dir2, }
+\item[{double}]{tol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a975388f1c647c850bf6fe95564bc3e0d}
+\hypertarget{class_r_s___math_a95bc8115bfccb1b37be5edaac0e5c667}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!make\-Angle\-Readable@{make\-Angle\-Readable}}
+\index{make\-Angle\-Readable@{make\-Angle\-Readable}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{make\-Angle\-Readable}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::make\-Angle\-Readable (
+\begin{DoxyParamCaption}
+\item[{double}]{angle, }
+\item[{bool}]{readable = {\ttfamily true}, }
+\item[{bool $\ast$}]{corrected = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a95bc8115bfccb1b37be5edaac0e5c667}
+\hypertarget{class_r_s___math_a9b10d1b49138c3f933c85a94d249a72d}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!pow@{pow}}
+\index{pow@{pow}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::pow (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a9b10d1b49138c3f933c85a94d249a72d}
+\hypertarget{class_r_s___math_ae61afb84e2cb74500e424d99c93fe7d2}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{rad2deg}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::rad2deg (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_ae61afb84e2cb74500e424d99c93fe7d2}
+\hypertarget{class_r_s___math_ab9a3999134521f753316eb7daa497410}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!rad2gra@{rad2gra}}
+\index{rad2gra@{rad2gra}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{rad2gra}]{\setlength{\rightskip}{0pt plus 5cm}static double R\-S\-\_\-\-Math\-::rad2gra (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_ab9a3999134521f753316eb7daa497410}
+\hypertarget{class_r_s___math_ae7695e522d0318e17dd2fc21b3e3f99c}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!round@{round}}
+\index{round@{round}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{round}]{\setlength{\rightskip}{0pt plus 5cm}static int R\-S\-\_\-\-Math\-::round (
+\begin{DoxyParamCaption}
+\item[{double}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_ae7695e522d0318e17dd2fc21b3e3f99c}
+\hypertarget{class_r_s___math_a77104690912de30774c7daa41fa52621}{\index{R\-S\-\_\-\-Math@{R\-S\-\_\-\-Math}!test@{test}}
+\index{test@{test}!RS_Math@{R\-S\-\_\-\-Math}}
+\subsubsection[{test}]{\setlength{\rightskip}{0pt plus 5cm}static void R\-S\-\_\-\-Math\-::test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_r_s___math_a77104690912de30774c7daa41fa52621}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__math_8h}{rs\-\_\-math.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{class_r_s___layer}{\section{R\-S\-\_\-\-Layer Class Reference}
+\label{class_r_s___layer}\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-layer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___layer_ad09eb200015e78d3a5fda3e5a8302e2e}{R\-S\-\_\-\-Layer} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&name)
+\item 
+\hyperlink{class_r_s___layer}{R\-S\-\_\-\-Layer} $\ast$ \hyperlink{class_r_s___layer_ad3ae3c4541f7d0024d5a00203c4d92be}{clone} ()
+\item 
+void \hyperlink{class_r_s___layer_ad893a790a624c7166dcb6333fbcd6422}{set\-Name} (const \hyperlink{rs__string_8h_a5adec11f318c2ae2ecdc6fe2b03be9fa}{R\-S\-\_\-\-String} \&name)
+\item 
+void \hyperlink{class_r_s___layer_ac5be377e1a80e3e19f12ba7b9dfc5fc8}{set\-Pen} (const \hyperlink{class_r_s___pen}{R\-S\-\_\-\-Pen} \&pen)
+\item 
+R\-S\-\_\-pen \hyperlink{class_r_s___layer_ac9e0da99df39f8a0f76cee94e994f1a8}{get\-Pen} () const 
+\item 
+bool \hyperlink{class_r_s___layer_a4bac277cb1e988be074d2850ef9b7cce}{is\-Frozen} () const 
+\item 
+bool \hyperlink{class_r_s___layer_a13d3a2fec12c4b3082f1ad5f0f33a2fc}{is\-Converted} () const 
+\item 
+void \hyperlink{class_r_s___layer_a5ff9c824b2c6d22cff58d0e7fe7c22d6}{set\-Converted} (bool c)
+\item 
+void \hyperlink{class_r_s___layer_a572f42428b321bd20cfa8cbb2ba84453}{toggled} ()
+\item 
+void \hyperlink{class_r_s___layer_a9a8140a09260cd97508af31016ced14a}{freeze} (bool freeze)
+\item 
+void \hyperlink{class_r_s___layer_a201e3d60c9c2098edca71316a1c4d463}{toggle\-Lock} ()
+\item 
+void \hyperlink{class_r_s___layer_a10191b7f9abd3706bfc76fc961b3bfd9}{lock} (bool l)
+\item 
+bool \hyperlink{class_r_s___layer_a9d78b6003d8ce252ef7cd6c309f14770}{is\-Locked} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{class_r_s___layer_a909c3b8f54a8daca137cd51405d2ee89}{operator$<$$<$} (std\-::ostream $\ast$os, const \hyperlink{class_r_s___layer}{R\-S\-\_\-\-Layer} \&l)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for representing a layer 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___layer_ad09eb200015e78d3a5fda3e5a8302e2e}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}}
+\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{R\-S\-\_\-\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Layer\-::\-R\-S\-\_\-\-Layer (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_r_s___layer_ad09eb200015e78d3a5fda3e5a8302e2e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___layer_ad3ae3c4541f7d0024d5a00203c4d92be}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!clone@{clone}}
+\index{clone@{clone}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Layer}$\ast$ R\-S\-\_\-\-Layer\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_ad3ae3c4541f7d0024d5a00203c4d92be}
+\hypertarget{class_r_s___layer_a9a8140a09260cd97508af31016ced14a}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!freeze@{freeze}}
+\index{freeze@{freeze}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{freeze}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::freeze (
+\begin{DoxyParamCaption}
+\item[{bool}]{freeze}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a9a8140a09260cd97508af31016ced14a}
+\hypertarget{class_r_s___layer_ac9e0da99df39f8a0f76cee94e994f1a8}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!get\-Pen@{get\-Pen}}
+\index{get\-Pen@{get\-Pen}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{get\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-pen R\-S\-\_\-\-Layer\-::get\-Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_ac9e0da99df39f8a0f76cee94e994f1a8}
+return default pen for this layer. \hypertarget{class_r_s___layer_a13d3a2fec12c4b3082f1ad5f0f33a2fc}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!is\-Converted@{is\-Converted}}
+\index{is\-Converted@{is\-Converted}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{is\-Converted}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Layer\-::is\-Converted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a13d3a2fec12c4b3082f1ad5f0f33a2fc}
+\hypertarget{class_r_s___layer_a4bac277cb1e988be074d2850ef9b7cce}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!is\-Frozen@{is\-Frozen}}
+\index{is\-Frozen@{is\-Frozen}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{is\-Frozen}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Layer\-::is\-Frozen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a4bac277cb1e988be074d2850ef9b7cce}
+\hypertarget{class_r_s___layer_a9d78b6003d8ce252ef7cd6c309f14770}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!is\-Locked@{is\-Locked}}
+\index{is\-Locked@{is\-Locked}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{is\-Locked}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Layer\-::is\-Locked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a9d78b6003d8ce252ef7cd6c309f14770}
+\hypertarget{class_r_s___layer_a10191b7f9abd3706bfc76fc961b3bfd9}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!lock@{lock}}
+\index{lock@{lock}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::lock (
+\begin{DoxyParamCaption}
+\item[{bool}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a10191b7f9abd3706bfc76fc961b3bfd9}
+\hypertarget{class_r_s___layer_a5ff9c824b2c6d22cff58d0e7fe7c22d6}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!set\-Converted@{set\-Converted}}
+\index{set\-Converted@{set\-Converted}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{set\-Converted}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::set\-Converted (
+\begin{DoxyParamCaption}
+\item[{bool}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a5ff9c824b2c6d22cff58d0e7fe7c22d6}
+\hypertarget{class_r_s___layer_ad893a790a624c7166dcb6333fbcd6422}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::set\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-String} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_ad893a790a624c7166dcb6333fbcd6422}
+sets a new name for this layer. \hypertarget{class_r_s___layer_ac5be377e1a80e3e19f12ba7b9dfc5fc8}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Pen} \&}]{pen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_ac5be377e1a80e3e19f12ba7b9dfc5fc8}
+sets the default pen for this layer. \hypertarget{class_r_s___layer_a572f42428b321bd20cfa8cbb2ba84453}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!toggled@{toggled}}
+\index{toggled@{toggled}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{toggled}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::toggled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a572f42428b321bd20cfa8cbb2ba84453}
+\hypertarget{class_r_s___layer_a201e3d60c9c2098edca71316a1c4d463}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!toggle\-Lock@{toggle\-Lock}}
+\index{toggle\-Lock@{toggle\-Lock}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{toggle\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Layer\-::toggle\-Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___layer_a201e3d60c9c2098edca71316a1c4d463}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_r_s___layer_a909c3b8f54a8daca137cd51405d2ee89}{\index{R\-S\-\_\-\-Layer@{R\-S\-\_\-\-Layer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!RS_Layer@{R\-S\-\_\-\-Layer}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream $\ast$}]{os, }
+\item[{const {\bf R\-S\-\_\-\-Layer} \&}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___layer_a909c3b8f54a8daca137cd51405d2ee89}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__layer_8h}{rs\-\_\-layer.\-h}\end{DoxyCompactItemize}

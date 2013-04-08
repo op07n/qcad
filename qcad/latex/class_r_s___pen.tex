@@ -1,0 +1,198 @@
+\hypertarget{class_r_s___pen}{\section{R\-S\-\_\-\-Pen Class Reference}
+\label{class_r_s___pen}\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}}
+}
+
+
+{\ttfamily \#include $<$rs\-\_\-pen.\-h$>$}
+
+
+
+Inherits \hyperlink{class_r_s___flags}{R\-S\-\_\-\-Flags}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s___pen_acc9112fb19b55df4ab9758650575c36c}{R\-S\-\_\-\-Pen} ()
+\item 
+\hyperlink{class_r_s___pen_acadb9875183cbc45146b1800ddbbddb1}{R\-S\-\_\-\-Pen} (const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c, \hyperlink{class_r_s2_a023485c482c5ee9e36b3dfad781adf29}{R\-S2\-::\-Line\-Width} w, R\-S\-::\-Line\-Type t)
+\item 
+\hyperlink{class_r_s___pen_a30859ffa70a7fefbce4ee1ae12555f37}{R\-S\-\_\-\-Pen} (unsigned int f)
+\item 
+virtual \hyperlink{class_r_s___pen_a5066b1b53f1a483cb548f3fc4a03df2b}{$\sim$\-R\-S\-\_\-\-Pen} ()
+\item 
+\hyperlink{class_r_s2_a6f3a82972c2d62456f6cacb74e14c95f}{R\-S2\-::\-Line\-Type} \hyperlink{class_r_s___pen_ade7422230225e3ddf3b1ca4dffa6fd11}{get\-Line\-Type} () const 
+\item 
+\hyperlink{class_r_s2_a023485c482c5ee9e36b3dfad781adf29}{R\-S2\-::\-Line\-Width} \hyperlink{class_r_s___pen_a3b75438a52d455e408f28699f38b0e5e}{get\-Width} () const 
+\item 
+void \hyperlink{class_r_s___pen_ac92f53a8f9c4118b33a6d0fd1462f34a}{set\-Width} (\hyperlink{class_r_s2_a023485c482c5ee9e36b3dfad781adf29}{R\-S2\-::\-Line\-Width} w)
+\item 
+double \hyperlink{class_r_s___pen_a440b941b50242b900a855ca9ed4d22ea}{get\-Screen\-Width} () const 
+\item 
+void \hyperlink{class_r_s___pen_a33fb782ac3ae1ef3da39b4ca3973adf2}{set\-Screen\-Width} (double w)
+\item 
+const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \& \hyperlink{class_r_s___pen_aac31445139e36e2bf3aea062c5d80f0f}{get\-Color} () const 
+\item 
+void \hyperlink{class_r_s___pen_ae54fc1847b7b2f5de84d32152a677679}{set\-Color} (const \hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \&c)
+\item 
+bool \hyperlink{class_r_s___pen_af4034d62099798469b196b409b9d37d3}{is\-Valid} ()
+\item 
+bool \hyperlink{class_r_s___pen_abe2b1b61d157ca3da68f5cbea94988ea}{operator==} (const \hyperlink{class_r_s___pen}{R\-S\-\_\-\-Pen} \&p) const 
+\item 
+bool \hyperlink{class_r_s___pen_aebbe1d462b618a163efe4d16c7998261}{operator!=} (const \hyperlink{class_r_s___pen}{R\-S\-\_\-\-Pen} \&p) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_r_s2_a6f3a82972c2d62456f6cacb74e14c95f}{R\-S2\-::\-Line\-Type} \hyperlink{class_r_s___pen_a69545beb2a93c9d20cb679d909d3224b}{line\-Type}
+\item 
+\hyperlink{class_r_s2_a023485c482c5ee9e36b3dfad781adf29}{R\-S2\-::\-Line\-Width} \hyperlink{class_r_s___pen_a2433e433183b582fe538e6fd2b4588cf}{width}
+\item 
+double \hyperlink{class_r_s___pen_a137d5080a8cd36268b4fea3fa12c1418}{screen\-Width}
+\item 
+\hyperlink{class_r_s___color}{R\-S\-\_\-\-Color} \hyperlink{class_r_s___pen_a4b44b65046fe820fdc3661c2f47660ae}{color}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{class_r_s___pen_a7ea20de3fa31120ba9fd33c26910e187}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_r_s___pen}{R\-S\-\_\-\-Pen} \&p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pen stores attributes for painting such as line width, linetype, color, ... 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_s___pen_acc9112fb19b55df4ab9758650575c36c}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}}
+\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{R\-S\-\_\-\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Pen\-::\-R\-S\-\_\-\-Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_acc9112fb19b55df4ab9758650575c36c}
+Create a default pen (black, solid, width 0). \hypertarget{class_r_s___pen_acadb9875183cbc45146b1800ddbbddb1}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}}
+\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{R\-S\-\_\-\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Pen\-::\-R\-S\-\_\-\-Pen (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c, }
+\item[{{\bf R\-S2\-::\-Line\-Width}}]{w, }
+\item[{R\-S\-::\-Line\-Type}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_acadb9875183cbc45146b1800ddbbddb1}
+Create a pen with the given attributes. \hypertarget{class_r_s___pen_a30859ffa70a7fefbce4ee1ae12555f37}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}}
+\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{R\-S\-\_\-\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}R\-S\-\_\-\-Pen\-::\-R\-S\-\_\-\-Pen (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_a30859ffa70a7fefbce4ee1ae12555f37}
+Create a default pen with the given flags. This is ususally used to create invalid pens. \hypertarget{class_r_s___pen_a5066b1b53f1a483cb548f3fc4a03df2b}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!$\sim$\-R\-S\-\_\-\-Pen@{$\sim$\-R\-S\-\_\-\-Pen}}
+\index{$\sim$\-R\-S\-\_\-\-Pen@{$\sim$\-R\-S\-\_\-\-Pen}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{$\sim$\-R\-S\-\_\-\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}virtual R\-S\-\_\-\-Pen\-::$\sim$\-R\-S\-\_\-\-Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_r_s___pen_a5066b1b53f1a483cb548f3fc4a03df2b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_s___pen_aac31445139e36e2bf3aea062c5d80f0f}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!get\-Color@{get\-Color}}
+\index{get\-Color@{get\-Color}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{get\-Color}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf R\-S\-\_\-\-Color}\& R\-S\-\_\-\-Pen\-::get\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_aac31445139e36e2bf3aea062c5d80f0f}
+\hypertarget{class_r_s___pen_ade7422230225e3ddf3b1ca4dffa6fd11}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!get\-Line\-Type@{get\-Line\-Type}}
+\index{get\-Line\-Type@{get\-Line\-Type}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{get\-Line\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S2\-::\-Line\-Type} R\-S\-\_\-\-Pen\-::get\-Line\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_ade7422230225e3ddf3b1ca4dffa6fd11}
+\hypertarget{class_r_s___pen_a440b941b50242b900a855ca9ed4d22ea}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!get\-Screen\-Width@{get\-Screen\-Width}}
+\index{get\-Screen\-Width@{get\-Screen\-Width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{get\-Screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Pen\-::get\-Screen\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_a440b941b50242b900a855ca9ed4d22ea}
+\hypertarget{class_r_s___pen_a3b75438a52d455e408f28699f38b0e5e}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S2\-::\-Line\-Width} R\-S\-\_\-\-Pen\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_a3b75438a52d455e408f28699f38b0e5e}
+\hypertarget{class_r_s___pen_af4034d62099798469b196b409b9d37d3}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Pen\-::is\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_af4034d62099798469b196b409b9d37d3}
+\hypertarget{class_r_s___pen_aebbe1d462b618a163efe4d16c7998261}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Pen\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Pen} \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_aebbe1d462b618a163efe4d16c7998261}
+\hypertarget{class_r_s___pen_abe2b1b61d157ca3da68f5cbea94988ea}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!operator==@{operator==}}
+\index{operator==@{operator==}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool R\-S\-\_\-\-Pen\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Pen} \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_abe2b1b61d157ca3da68f5cbea94988ea}
+\hypertarget{class_r_s___pen_ae54fc1847b7b2f5de84d32152a677679}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Pen\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{const {\bf R\-S\-\_\-\-Color} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_ae54fc1847b7b2f5de84d32152a677679}
+\hypertarget{class_r_s___pen_a33fb782ac3ae1ef3da39b4ca3973adf2}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!set\-Screen\-Width@{set\-Screen\-Width}}
+\index{set\-Screen\-Width@{set\-Screen\-Width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{set\-Screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Pen\-::set\-Screen\-Width (
+\begin{DoxyParamCaption}
+\item[{double}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_a33fb782ac3ae1ef3da39b4ca3973adf2}
+\hypertarget{class_r_s___pen_ac92f53a8f9c4118b33a6d0fd1462f34a}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!set\-Width@{set\-Width}}
+\index{set\-Width@{set\-Width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{set\-Width}]{\setlength{\rightskip}{0pt plus 5cm}void R\-S\-\_\-\-Pen\-::set\-Width (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-S2\-::\-Line\-Width}}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_r_s___pen_ac92f53a8f9c4118b33a6d0fd1462f34a}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_r_s___pen_a7ea20de3fa31120ba9fd33c26910e187}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{const {\bf R\-S\-\_\-\-Pen} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_r_s___pen_a7ea20de3fa31120ba9fd33c26910e187}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_r_s___pen_a4b44b65046fe820fdc3661c2f47660ae}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!color@{color}}
+\index{color@{color}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S\-\_\-\-Color} R\-S\-\_\-\-Pen\-::color\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_r_s___pen_a4b44b65046fe820fdc3661c2f47660ae}
+\hypertarget{class_r_s___pen_a69545beb2a93c9d20cb679d909d3224b}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!line\-Type@{line\-Type}}
+\index{line\-Type@{line\-Type}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{line\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S2\-::\-Line\-Type} R\-S\-\_\-\-Pen\-::line\-Type\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_r_s___pen_a69545beb2a93c9d20cb679d909d3224b}
+\hypertarget{class_r_s___pen_a137d5080a8cd36268b4fea3fa12c1418}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!screen\-Width@{screen\-Width}}
+\index{screen\-Width@{screen\-Width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}double R\-S\-\_\-\-Pen\-::screen\-Width\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_r_s___pen_a137d5080a8cd36268b4fea3fa12c1418}
+\hypertarget{class_r_s___pen_a2433e433183b582fe538e6fd2b4588cf}{\index{R\-S\-\_\-\-Pen@{R\-S\-\_\-\-Pen}!width@{width}}
+\index{width@{width}!RS_Pen@{R\-S\-\_\-\-Pen}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-S2\-::\-Line\-Width} R\-S\-\_\-\-Pen\-::width\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_r_s___pen_a2433e433183b582fe538e6fd2b4588cf}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rs__pen_8h}{rs\-\_\-pen.\-h}\end{DoxyCompactItemize}

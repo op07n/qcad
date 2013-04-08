@@ -1,4 +1,4 @@
-#include "qcad.h"
+#include "qc_applicationwindow.h"
 #include <QtGui/QApplication>
 
 int main(int argc, char *argv[])

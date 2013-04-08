@@ -669,7 +669,7 @@ public:
 		case BorderLineX2:
 			return Qt::DashDotLine;
 			break;
-		case LineBylayer:
+		case LineByLayer:
 		case LineByBlock:
 		default:
 			return Qt::SolidLine;
@@ -760,7 +760,7 @@ public:
 	*/
 	static LineWidth intToLineWidth(int w) {
 		if ( w == -3) {
-			return WidthDefault;
+			return WidthByDefault;
 		} else if (w == -2) {
 			return WidthByBlock;
 		} else if (w == -1) {
@@ -864,7 +864,7 @@ public:
 			return Qt::WaitCursor;
 			break;
 		case IbeamCursor:
-			return Qt::IbeamCursor;
+			return Qt::IBeamCursor;
 			break;
 		case SizeVerCursor:
 			return Qt::SizeVerCursor;
