@@ -10,6 +10,7 @@
 #include "rs_color.h"
 #include "rs_keyevent.h"
 #include "rs_linetypepattern.h"
+#include "rs_mouseevent.h"
 #include "rs_commandevent.h"
 
 class RS_ActionInterface;
@@ -176,29 +177,279 @@ public:
 		metaGridColor = c;
 	}
 
+	/** 
+	* Sets the highlight color
+	*/
+	void setHighlightedColor(const RS_Color& c) {
+		highlightedColor = c
+	}
 
+/** 
+* This virtual method can be overwritten to set the mouse
+* cursor to the given type.
+*/
+virtual void setMouseCursor(RS2::CursorType /*c*/) {}
 
+void setContainer(RS_EntityContainer* container);
+RS_EntityContainer* getContainer() {
+	return container;
+}
+void setFactor(double f) {
+	setFactorX(f);
+	setFactorY(f);
+}
+void setFactorX(double f);
+void setFactorY(double f);
+RS_Vector getFactor() {
+	return factor;
+}
+/** 
+* Sets the offset of the graphic.
+*/
+void setOffset( int ox, int oy) {
+	setFactorX(ox);
+	setFactorY(oy);
+}
+void setOffsetX( int ox) {
+	setFactorX(ox);
+}
+void setOffsetY( int oy) {
+	setFactorY(oy);
+}
+int getOffsetX() {
+	return offsetX;
+}
+int getOffsetY() {
+	return offsetY;
+}
+void centerOffsetX();
+void centerOffsetY();
+void centerX(double x);
+void centerY(double y);
+virtual void updateView();
+/**
+* Sets a fixed border in pixel around the graphic. This border
+* specifies how far the user can scroll outside the graphic
+* area.
+*/
 
+void setBorders(int left, int top, int right, int bottom) {
+	borderLeft = left;
+	borderTop = top;
+	borderRight = right;
+	borderBottom = bottom;
+}
 
+int getBorderLeft() {
+	return borderLeft;
+}
+int getBorderTop() {
+	return borderTop;
+}
+int getBorderRight() {
+	return borderRight;
+}
+int getBorderBottom() {
+	return borderBottom;
+}
 
+void disableUpdate() {
+	updateEnabled--;
+}
+void enableUpdate() {
+	updateEnabled++;
+}
+bool isUpdateEnabled() {
+	return (updateEnabled==0);
+}
 
+void freezeZoom( bool freeze) {
+	zoomFrozen = freeze;
+}
+bool isZoomFrozen() {
+	return zoomFrozen;
+}
 
+void setDefaultAction(RS_ActionInterface* atcion);
+RS_ActionInterface* getDefaultAction();
+void setCurrentAction(RS_ActionInterface* action);
+RS_ActionInterface* getCurrentAction();
 
+void killSelectActions();
+void killAllActions();
 
+/** 
+* Must be overwritten to emulate a mouse move event with 
+* the last known mouse position.
+*
+* @see mx, my
+*/
+virtual void emulateMouseMoveEvent() = 0;
 
+void back();
+void enter();
 
+void mousePressEvent(RS_MouseEvent* e);
+void mouseReleaseEvent(RS_MouseEvent* e);
+void mouseMoveEvent(RS_MouseEvent* e);
+void mouseLeaveEvent();
+void mouseEnterEvent();
+void keyPressedEvent(RS_KeyEvent* e);
+void keyReleaseEvent(RS_KeyEvent* e);
+void commandEvent(RS_CommandEvent* e);
+void enableCoordinateInput();
+void disableCoordinateInput();
 
+virtual void zoomIn(double f=1.5, const RS_Vector& center = RS_Vector(false));
+virtual void zoomInX(double f=1.5);
+virtual void zoomInY(double f=1.5);
+virtual void zoomOut(double f=1.5, const RS_Vector& center=RS_Vector(false));
+virtual void zoomOutX(double f=1.5);
+virtual void zoomOutY(double f=1.5);
+virtual void zoomAuto(bool axis=true, bool keepAspectRatio=true);
+virtual void zoomAutoY(bool axis=true);
+virtual void zoomPrevious();
+virtual void saveView();
+virtual void restoreView();
+virtual void zoomWindow(RS_Vector v1, RS_Vector v2,
+	                    bool keepAspectRation=true);
+//virtual void zoomPan(RS_Vector v1);
+virtual void zoomPan(int dx, int dy);
+virtual void zoomScroll(RS2::Direction direction);
+virtual void zoomPage();
 
+virtual void drawWindow(RS_Vector v1, RS_Vector v2);
+virtual void drawIt();
+virtual void deleteEntity(RS_Entity* e);
+virtual void drawEntity(RS_Entity* e, double patternOffset=0.0, bool db=false);
+virtual void drawEntityPlain(RS_Entity* e, double patternOffset=0.0);
+virtual void setPenForEntity(RS_Entity* e);
 
+void simulateIt();
+void simulateEntity(RS_Entity* e, const RS_Pen& pen);
+void drawLineSmooth(const RS_Vector& p1, const RS_Pen& p2, const RS_pen& pen);
+void drawArcSmooth(const RS_Vector& center, double radius,
+	double a1, double a2, bool rev const RS_Pen& pen);
+void simulationDelay(bool step= false);
 
+virtual RS_LineTypePattern* getPattern(RS2::LineType t);
 
+virtual void drawAbsoluteZero();
+virtual void drawRelativeZero();
+virtual void drawPaper();
+virtual void drawGrid();
+virtual void drawMetaGrid();
+virtual void updateGrid();
+RS_Grid* getGrid() {
+	return grid;
+}
+virtual void updateGidStatusWidget(const RS_String& /*text*/) {}
 
+void setDefaultSnapMode(RS2::SnapMode sm);
+RS2::SnapMode getDefaultSnapRestriction() {
+	return defaultSnapMode;
+}
 
+//void showGrid(bool on) {
+//    gridVisable = on;
+//}
+bool isGridOn();
 
+RS_Vector toGui(RS_Vector v);
+double toGuiX(double x, bool* visible=NULL);
+double toGuiY(double y);
+double toGuiDX(double d);
+double toGuiDY(double d);
 
+RS_Vector toGraph(RS_Vector v);
+RS_Vector toGraph(int x, int y);
+double toGraphX(int x);
+double toGraphY(int y);
 
+/** 
+*  (Un-)Locks the position of the ralative zero.
+*
+* @param lock true; lock, fasle: unlock
+*/
+voi lockRelativeZero(bool lock) {
+	relativeZeroLocked=lock;
+}
 
+/**
+* @return true if the position of the relative zero point is
+* locked.
+*/
+bool isRelativeZeroLocked() {
+	return relativeZeroLocked;
+}
 
+/** 
+* @return Relative zero coordinate.
+*/
+RS_Vector getRelativeZero() {
+	return relativeZero;
+}
+
+void setRelativeZero(const RS_Vector& pos);
+void moveRelativeZero(const RS_Vector& pos);
+
+RS_EventHandler* getEventHandler() {
+	return eventHandler;
+}
+
+/** 
+* Enable of disables printing.
+*/
+void setPrinting(bool p) {
+	printing = p;
+}
+
+/** 
+* @return true This is a graphic view for printing.
+* @return false Otherwise.
+*/
+bool isPrinting() {
+	return printing;
+}
+
+/** 
+* @retval true Draft mode is on for this view (all lines with 1 pixel / no style scaling).
+* @retval false Otherwise.
+*/
+bool isDraftMode() {
+	return draftMode;
+}
+
+/** 
+* Sets the simulation speed in percentage.
+*/
+void setSimulationSpeed(int s) {
+	simulationSpeed = s;
+}
+/** 
+* @return the simulation speed in percentage.
+*/
+int getSimulationSpeed() {
+	return simulationSpeed;
+}
+/** 
+* Sets the simulation smooth mode.
+*/
+void setSimulationSmooth(bool s) {
+	simulationSmooth = s;
+}
+/** 
+* setSimulation rapid mode.
+*/
+void setSimulationRapid(bool r) {
+	simulationRapid = r;
+}
+/**
+* return the simulation rapid mode.
+*/
+bool getSimulationRapid() {
+	return simulationRapid;
+}
 
 protected:
 	RS_EntityContainer* container;
@@ -219,6 +470,7 @@ protected:
 	/** selected color */
 	RS_Color selectedColor;
 	/** highlighted color */
+	RS_Color highlightedColor;
 	/** Grid */
 	RS_Grid* grid;
     /**
@@ -269,7 +521,7 @@ private:
 	//! If true, the entity is drawn slowly (pixel by pixel).
 	bool simulationSmooth;
 	//! If true, the way between entities is also shown.
-	bool simulationRapid
+	bool simulationRapid;
 	//! Last position (for rapid move)
 	RS_Vector simulationlast;
 

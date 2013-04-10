@@ -168,5 +168,26 @@
     <ClInclude Include="rs_linetypepattern.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_mouseevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_commandevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qg_graphicview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_painterqt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_painter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_img.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_pointarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

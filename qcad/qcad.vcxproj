@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="fparser.h" />
     <ClInclude Include="GeneratedFiles\ui_qcad.h" />
+    <ClInclude Include="qg_graphicview.h" />
     <ClInclude Include="qg_mainwindowinterface.h" />
     <ClInclude Include="rs.h" />
     <ClInclude Include="rs_arc.h" />
@@ -129,6 +130,7 @@
     <ClInclude Include="rs_blocklist.h" />
     <ClInclude Include="rs_circle.h" />
     <ClInclude Include="rs_color.h" />
+    <ClInclude Include="rs_commandevent.h" />
     <ClInclude Include="rs_debug.h" />
     <ClInclude Include="rs_dict.h" />
     <ClInclude Include="rs_document.h" />
@@ -138,6 +140,7 @@
     <ClInclude Include="rs_flags.h" />
     <ClInclude Include="rs_grahic.h" />
     <ClInclude Include="rs_graphicview.h" />
+    <ClInclude Include="rs_img.h" />
     <ClInclude Include="rs_keyevent.h" />
     <ClInclude Include="rs_layer.h" />
     <ClInclude Include="rs_layerlist.h" />
@@ -145,7 +148,11 @@
     <ClInclude Include="rs_linetypepattern.h" />
     <ClInclude Include="rs_mainwindowinterface.h" />
     <ClInclude Include="rs_math.h" />
+    <ClInclude Include="rs_mouseevent.h" />
+    <ClInclude Include="rs_painter.h" />
+    <ClInclude Include="rs_painterqt.h" />
     <ClInclude Include="rs_pen.h" />
+    <ClInclude Include="rs_pointarray.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
     <ClInclude Include="rs_string.h" />
