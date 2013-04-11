@@ -172,10 +172,12 @@
     <ClInclude Include="rs_grahic.h" />
     <ClInclude Include="rs_graphicview.h" />
     <ClInclude Include="rs_img.h" />
+    <ClInclude Include="rs_insert.h" />
     <ClInclude Include="rs_keyevent.h" />
     <ClInclude Include="rs_layer.h" />
     <ClInclude Include="rs_layerlist.h" />
     <ClInclude Include="rs_layerlistlistener.h" />
+    <ClInclude Include="rs_line.h" />
     <ClInclude Include="rs_linetypepattern.h" />
     <ClInclude Include="rs_mainwindowinterface.h" />
     <ClInclude Include="rs_math.h" />
@@ -183,6 +185,7 @@
     <ClInclude Include="rs_painter.h" />
     <ClInclude Include="rs_painterqt.h" />
     <ClInclude Include="rs_pen.h" />
+    <ClInclude Include="rs_point.h" />
     <ClInclude Include="rs_pointarray.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
