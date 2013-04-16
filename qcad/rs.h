@@ -81,7 +81,7 @@ public:
 	* be enough to distinguish file types.
 	*/
 
-	enum Formattype {
+	enum FormatType {
 		FormatUnknown,          /**< Unknow */
 		FormatDXF1,            /**< QCad 1 compatibility DXF fromat. */
 		FormatDXF,             /**< DXF format. 2000. */
@@ -167,7 +167,7 @@ public:
 		ActionSelectWindow,
 		ActionDeselectWindow,
 		ActionSelectAll,
-		ActionDeSelectAll,
+		ActionDeselectAll,
 		ActionSelectIntersected,
 		ActionDeselectIntersected,
 		ActionSelectInvert,
@@ -316,7 +316,7 @@ public:
 		ActionPARISDebugCreateContainer,
 #endif
 
-#ifndef RS_CAM
+#ifdef RS_CAM
 		ActionCamExportAuto,
 		ActionCamReorder,
 
@@ -435,7 +435,7 @@ public:
 		/** Architectural (e.g. 7'-9 1/8")*/
 		Architectural,
 		/** Fractional (e.g. 7 9 1/8) */
-		Frational
+		Fractional
 	};
 
 	/**
@@ -474,7 +474,7 @@ public:
 		* all Entity Containers are resolved
 		* (including Texts, Polylines, ...)
 		*/
-		ResolveALl
+		ResolveAll
 	};
 
 	enum Direction {
@@ -514,6 +514,10 @@ public:
 		ByStyle
 	};
 
+	enum TextLineSpacingStyle {
+		AtLeast,
+		Exact
+	};
 	/**
 	* Leader path type.
 	*/
@@ -544,7 +548,7 @@ public:
 	enum SnapMode {
 		SnapFree,
 		SnapGrid,
-		SnapEndPoint,
+		SnapEndpoint,
 		SnapMiddle,
 		SnapCenter,
 		SnapOnEntity,
@@ -580,7 +584,7 @@ public:
 		MetaButton      = Qt::MetaButton,
 #endif
 		KeyButtonMask   = Qt::KeyButtonMask,
-		KeyPad          = Qt::Keypad
+		Keypad          = Qt::Keypad
 
 	};
 
@@ -591,6 +595,9 @@ public:
 		return (Qt::ButtonState)t;
 	}
 
+	static RS2::ButtonState qtToRsButtonState(Qt::ButtonState t) {
+		return (RS2::ButtonState)t;
+	}
 	/**
 	* Enum of line styles:
 	*/
@@ -752,7 +759,7 @@ public:
 		Width23 = 211,
 		WidthByLayer = -1,
 		WidthByBlock = -2,
-		WidthByDefault = -3,
+		WidthDefault = -3
 	};
 
 	/**
@@ -760,7 +767,7 @@ public:
 	*/
 	static LineWidth intToLineWidth(int w) {
 		if ( w == -3) {
-			return WidthByDefault;
+			return WidthDefault;
 		} else if (w == -2) {
 			return WidthByBlock;
 		} else if (w == -1) {
@@ -976,6 +983,7 @@ public:
 		case A3:
 			ret = QPrinter::A3;
 			break;
+		default:
 		case A4:
 			ret = QPrinter::A4;
 			break;
@@ -1027,9 +1035,6 @@ public:
 		case B10:
 			ret = QPrinter::B10;
 			break;
-		case B0:
-			ret = QPrinter::B0;
-			break;
 		case C5E:
 			ret = QPrinter::C5E;
 			break;
@@ -1050,9 +1055,9 @@ public:
 			ret = QPrinter::NPageSize;
 			break;		
 		}
-
+		return ret;
 	}
 #endif
 
-}
+};
 #endif

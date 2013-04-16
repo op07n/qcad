@@ -38,10 +38,38 @@ public:
 * class for a line entity
 *
 */
-class RS_line : public RS_AtomicEntity {
+class RS_Line : public RS_AtomicEntity {
 public:
 	//
 	//
 	RS_Line(RS_EntityContainer* parent,
 		    const RS_LineData& d);
+
+	virtual RS_Entity* clone();
+	/*{
+	   }
+	   */
+
+	virtual ~RS_Line();
+
+	/** @return RS2::EntityLine */
+	virtual RS2::EntityType rtti() const {
+		return RS2::EntityLine;
+	}
+	/** @retrun true */
+	virtual bool isEdge() const {
+		return true;
+	}
+
+	/** @return Copy of data thate defines the line. */
+	RS_LineData getData() const {
+		return data;
+	}
+	virtual RS_VectorSolutions getRefPoints();
+
+	/** @ return the startpoint of the entity */
+	virtual RS_Vector getStartpoint() const {
+		return data.startpoint;
+	}
+
 };
