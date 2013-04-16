@@ -87,7 +87,6 @@ public slots:
 	void slotDrawCircleCR();
 	void slotDrawCircle2P();
 	void slotDrawCircle3P();
-	void slotDrawCircle3P();
 	void slotDrawCircleParallel();
 	void slotDrawArc();
 	void slotDrawArc3P();
@@ -101,7 +100,7 @@ public slots:
 	void slotDrawImage();
 	void slotDrawPolyline();
 	void slotPolylineAdd();
-	void slotPolylineAdd();
+	void slotPolylineAppend();
 	void slotPolylineDel();
 	void slotPolylineDelBetween();
 	void slotPolylineTrim();
@@ -140,17 +139,117 @@ public slots:
 	void slotSnapOnEntity();
 	void slotSnapCenter();
 	void slotSnapMiddle();
-	void slotSnapMiddle();
 	void slotSnapDist();
 	void slotSnapIntersection();
 	void slotSnapIntersectionManual();
 
 	void slotRestrictNothing();
 	void slotRestrictOrthogonal();
-	void slotrestrict
+	void slotRestrictHorizontal();
+	void slotRestrictVertical();
 
+	void disableSnaps();
+	void disableRestriction();
+	void updateSnapMode();
 
+	void slotSetRelativeZero();
+	void slotLockRelativeZero(bool on);
 
+	void slotInfoInside();
+	void slotInfoDIst();
+	void slotInfoDist2();
+	void slotInfoAngle();
+	void slotInfoTotalLength();
+	void slotInfoArea();
 
+	void slotLayersDefreezeAll();
+	void slotLayersFreezeAll();
+	void slotLayersAdd();
+	void slotLayersRemove();
+	void slotLayersEdit();
+	void slotLayersInsert();
+	void slotLayersToggleView();
+	void slotLayersToggleLock();
+
+    void slotBlocksDefreezeAll();
+	void slotBlocksFreezeAll();
+	void slotBlocksAdd();
+	void slotBlocksRemove();
+	void slotBlocksAttributes();
+	void slotBlocksEdit();
+	void slotBlocksInsert();
+	void slotBlocksToggleView();
+	void slotBlocksCreate();
+	void slotBlocksExpole();
+
+	void slotOptionsDrawing();
+	
+	void slotCamExportAuto();
+	void slotCamRecorder();
+
+	void slotFocusNormal();
+
+	void setActionSnapFree(QAction* a) {
+		snapFree = a;
+	}
+	void setActionSnapGrid(QAction* a) {
+		snapFree = a;
+	}
+	void setActionSnapEndPoint(QAction* a) {
+		snapEndPoint = a;
+	}
+	void setActionSnapOnEntity(QAction* a) {
+		snapOnEntity = a;
+	}
+	void setActionSnapCenter(QAction* a) {
+		snapCenter = a;
+	}
+	void setActionSnapMiddle(QAction* a) {
+		snapMiddle = a;
+	}
+	void snapActionSnapDist(QAction* a) {
+		snapDist = a;
+	}
+	void setActionSnapIntersection(QAction* a) {
+		snapIntersectionManual = a;
+	}
+	void setActionRestricNothing(QAction* a) {
+		restrictNothing = a;
+	}
+	void setActionRestrictOrthogonal(QAction* a) {
+		restrictOrthogonal = a;
+	}
+	void setActionRestrictHorizontal(QAction* a) {
+		restrictHorizontal = a;
+	}
+	void setActionRestrictVertical(QAction* a) {
+		restrictVertical = a;
+	}
+	void setActionLockRelativeZero(QAction* a) {
+		lockRelativeZero = a;
+	}
+
+	void setCadTooBarSnap(QG_CadToolBarSnap* tb);
+
+	private:
+		QG_MainWindowInterface* mainWindow;
+		QG_CadToolBarSnap* cadToolBarSnap;
+
+		QAction* snapFree;
+		QAction* snapGrid;
+		QAction* snapEndpoint;
+		QAction* snapOnEntity;
+		QAction* snapCenter;
+		QAction* snapMiddle;
+		QAction* snapDist;
+		QAction* snapIntersection;
+		QAction* snapIntersectionManual;
+
+		QAction* restrictNothing;
+		QAction* restrictOrthogonal;
+		QAction* restrictHorizontal;
+		QAction* restrictVertical;
+
+		QAction* lockRelativeZero;
 
 };
