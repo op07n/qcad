@@ -204,5 +204,11 @@
     <ClInclude Include="rs_point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_variabledict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_variable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

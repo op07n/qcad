@@ -190,6 +190,8 @@
     <ClInclude Include="rs_stringlist.h" />
     <ClInclude Include="rs_undo.h" />
     <ClInclude Include="rs_undoable.h" />
+    <ClInclude Include="rs_variable.h" />
+    <ClInclude Include="rs_variabledict.h" />
     <ClInclude Include="rs_vector.h" />
   </ItemGroup>
   <ItemGroup>

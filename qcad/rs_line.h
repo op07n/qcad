@@ -138,6 +138,44 @@ public:
 	virtual double getAngle2() const {
 		return data.endpoint.angleTo(data.startpoint);
 	}
+
+	
+	virtual RS_Vector getNearestEndPoint(const RS_Vector& coord,
+		                                 double* dist = NULL);
+	virtual RS_Vector getNearestPointOnEntity(const RS_Vector& coord, 
+		bool onEntity  = true , double* dist  = NULL , RS_Entity** entity = NULL);
+	virtual RS_Vector getNearestCenter(const RS_Vector& coord,
+		                               double* dist = NULL );
+	virtual RS_Vector getNearestMiddle(const RS_Vector& coord,
+		                               double* dist );
+	virtual RS_Vector getNearestDist(double distance,
+		                             const RS_Vector& coord,
+									 double* dist = NULL);
+	virtual RS_Vector getNearestDist(double distance,
+		                             bool startup);
+	//
+	//
+	virtual double getDistanceToPoint(const RS_Vector& coord,
+		                              RS_Entity** entity , 
+									  RS2::ResolveLevel level , 
+									  double solidDist );
+
+	virtual void move(RS_Vector offset);
+	virtual void rotate(RS_Vector center, double angle);
+	virtual void scale(RS_Vector center, RS_Vector factor);
+	virtual void mirror(RS_Vector axisPoint1, RS_Vector axisPoint2);
+    virtual void stretch(RS_Vector firstcorner, 
+		                 RS_Vector secondCorner, 
+						 RS_Vector offset);
+	virtual void moveRef(const RS_Vector& ref, const RS_Vector& offset);
+
+	virtual void draw(RS_Painter* painter, RS_GraphicView* view, double patternOffset);
+
+	friend std::ostream& operator<< (std::ostream& os, const RS_Line& l);
+
+	virtual void calculateBorders();
 protected:
 	RS_LineData data;
+	//
+	//
 };

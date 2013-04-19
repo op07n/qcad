@@ -3,5 +3,6 @@
 
 #include "rs_blocklist.h"
 #include "rs_layerlist.h"
+#include "rs_variabledict.h"
 
 #endif
