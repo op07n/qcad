@@ -31,6 +31,23 @@ public:
 	void add(const RS_String& key, double value, int code);
 
 	RS_Vector getVector(const RS_String& key, const RS_Vector& def);
+	RS_String getString(const RS_String& key, const RS_String& def);
+	int getInt(const RS_String& key, const RS_String& def);
+	double getDouble(const RS_String& key, double def);
+
+	virtual void remove(const RS_String& key);
+
+	RS_Dict<RS_Variable>& getVariableDict() {
+		return variables;
+	}
+
+	//
+
+	friend std::ostream& operator << (std::ostream& os, RS_VariableDict& v);
+
+private:
+	//
+	RS_Dict<RS_Variable> variables;
 };
 
 

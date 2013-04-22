@@ -25,7 +25,7 @@ public:
 	virtual RS_BlockList* getBlockList() = 0;
 
 	virtual void newDoc();
-	virtual void save() = 0;
+	virtual bool save() = 0;
 	virtual bool saveas(const RS_String & filename, RS2::Formattype type) = 0;
 	virtual bool open(const RS_String & filename, RS2::Formattype type) = 0;
 
@@ -40,6 +40,16 @@ public:
 		 }
 	 }
 
+
+protected:
+	/** Flags set if the document was modified and not yet saved */
+	bool modified;
+    /** Active Pen */
+	RS_Pen activePen;
+	/** File name of the document or empty for a new document */
+	RS_String filename;
+    /** Format type */
+	RS2::FormatType formatType;
 };
 
 

@@ -210,5 +210,8 @@
     <ClInclude Include="rs_variable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_undocycle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
