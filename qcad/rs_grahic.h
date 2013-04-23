@@ -68,6 +68,43 @@ public:
 	   return activePen;
    }
 
+   /** 
+   * Sets the currently active drawing pen to p.
+   */
+   void setActivePen(RS_Pen p) {
+	   activePen = p;
+   }
+
+   /** 
+   * @return File name of the document currently loaded.
+   * Note, that the default file name is empty.
+   */
+   RS_String getFilename() const {
+	   return filename;
+   }
+
+   /**
+   * Sets file name for the document currently loaded.
+   */
+   void setFilename(const RS_String& fn) {
+	   filename = fn;
+   }
+
+   /** 
+   * @retval true The document has been modified since it was last saved.
+   * @retval false The document has not been modified since it was last saved.
+   */
+   virtual bool isModified() const {
+	   return modified;
+   }
+
+   /** 
+   * Overwritten to set modified flag before starting an undo cycle.
+   */
+   virtual void startUndoCycle() {
+	   setModified(true);
+	   RS_Undo::startUndoCycle();
+   }
 
 private:
 	RS_LayerList layerList;
