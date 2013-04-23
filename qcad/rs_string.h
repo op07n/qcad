@@ -10,9 +10,9 @@
 
 class RS_StringCompat {
 public:
-	static RS_String repalce(const RS_String& str, RS_Char c1, RS_Char c2);
+	static RS_String replace(const RS_String& str, RS_Char c1, RS_Char c2);
 	static RS_String replace(const RS_String& str,
-		cosnt RS_String& s1, const RS_String& s2);
+		const RS_String& s1, const RS_String& s2);
 	static void test();
 };
 

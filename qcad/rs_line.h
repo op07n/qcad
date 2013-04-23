@@ -78,7 +78,7 @@ public:
 	/** Sets the startpoint */
 	void setStartpoint(RS_Vector s) {
 		data.startpoint = s;
-		caculateBorders();
+		calculateBorders();
 	}
 	/** Sets the endpoint */
 	void setEndpoint(RS_Vector e) {

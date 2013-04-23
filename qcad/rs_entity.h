@@ -17,7 +17,7 @@ class RS_Block;
 class RS_Circle;
 class RS_Document;
 class RS_EntityContainer;
-class Rs_Graphic;
+class RS_Graphic;
 class RS_GraphicView;
 class RS_Insert;
 class RS_Line;
@@ -54,7 +54,7 @@ public:
 	*/
 
 	virtual RS2::EntityType rtti() const {
-		return RS2::UndoableEntity;
+		return RS2::EntityUnknown;
 	}
 
 	unsigned long int getId() const {
@@ -151,7 +151,7 @@ public:
 	virtual bool isVisible();
 	virtual void setVisible(bool v) {
 		if (v) {
-			setFlag(RS2::FlagVisible);
+			setFlags(RS2::FlagVisible);
 		} else {
 			delFlag(RS2::FlagVisible);
 		}

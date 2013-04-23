@@ -88,9 +88,9 @@ private:
 	int CompileFunctionParams(const char*, int , unsigned);
 	int CompileElement(const char*, int);
 	int CompilePow(const char*, int);
-	int CompileMult(const char* int);
+	int CompileMult(const char*, int);
 	int CompileAddition(const char*, int);
-	int CompileComparision(const char* int);
+	int CompileComparision(const char*, int);
 	int CompileAnd(const char*, int);
 	int CompileOr(const char*, int);
 	int CompileExpression(const char*, int, bool= false);

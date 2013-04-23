@@ -17,7 +17,7 @@
 /** 
 * A graphic document which can contain entities layers and blocks.
 */
-class RS_Graphics : public RS_Document {
+class RS_Graphic : public RS_Document {
 public:
 	RS_Graphics(RS_EntityContainer* parent=NULL);
 	virtual ~RS_Graphic();

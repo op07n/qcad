@@ -12,7 +12,7 @@
 
 class RS_Color: public QColor,public RS_Flags {
 public:
-	RS_Color() : QColor(), RS_Flags)() {}
+	RS_Color() : QColor(), RS_Flags() {}
 	RS_Color(int r, int g, int b) : QColor(r,g,b), RS_Flags() {}
 	RS_Color(const QColor& c) : QColor(c), RS_Flags() {}
 	RS_Color(const RS_Color& c) : QColor(c), RS_Flags() {

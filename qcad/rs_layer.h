@@ -1,10 +1,10 @@
-#ifndef RS_LAYERS_H
-#define RS_LAYERS_H
+#ifndef RS_LAYER_H
+#define RS_LAYER_H
 
 #include <stddef.h>
 
 #ifdef __hpux
-#inlcude <sys/_size_t.h>
+#include <sys/_size_t.h>
 #endif
 
 #include <iostream>
@@ -66,7 +66,7 @@ public:
 
 	/** sets a new name for this layer. */
 	void setName(const RS_String& name) {
-		return data.name;
+		data.name = name;
 	}
 
     /** @return the name of this layer. */
@@ -80,7 +80,7 @@ public:
 	}
 
 	/** return default pen for this layer. */
-	RS_pen getPen() const{
+	RS_Pen getPen() const{
 		return data.pen;
 	}
 
@@ -97,7 +97,7 @@ public:
 		data.converted = c;
 	}
 
-	void toggled() {
+	void toggle() {
 		data.frozen = !data.frozen;
 	}
 
@@ -110,14 +110,14 @@ public:
 	}
 
 	void lock(bool l) {
-		data.locked = 1;
+		data.locked = l;
 	}
 
 	bool isLocked() {
 		return data.locked;
 	}
 
-	friend std::ostream& operator << (std::ostream* os, const RS_Layer& l);
+	friend std::ostream& operator << (std::ostream& os, const RS_Layer& l);
 
 private:
 	//! Layer data

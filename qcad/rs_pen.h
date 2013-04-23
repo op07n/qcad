@@ -20,7 +20,7 @@ public:
 	RS_Pen() : RS_Flags() {
 		setColor(RS_Color(0,0,0));
 		setWidth(RS2::Width00);
-		setlineType(RS2::SolidLine)
+		setLineType(RS2::SolidLine);
 			setScreenWidth(0);
 	}
 
@@ -29,7 +29,7 @@ public:
 	*/
 	RS_Pen(const RS_Color& c,
 		RS2::LineWidth w,
-		RS::LineType t) : RS_Flags() {
+		RS2::LineType t) : RS_Flags() {
 			setColor(c);
 			setWidth(w);
 			setLineType(t);
@@ -55,7 +55,9 @@ public:
 	RS2::LineType getLineType() const {
 		return lineType;
 	}
-
+	void setLineType(RS2::LineType t) {
+		lineType = t;
+	}
 	RS2::LineWidth getWidth() const {
 		return width;
 	}

@@ -43,7 +43,7 @@ public:
 	void print(const char* format ...);
 	void printUnicode(const RS_String& text);
 	void timestamp();
-	void setStream(FILES* s) {
+	void setStream(FILE* s) {
 		stream = s;
 	}
 

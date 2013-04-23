@@ -23,7 +23,7 @@ public:
 	/** 
 	* @return number of the layers in the list
 	*/
-	unit count() const {
+	uint count() const {
 		return layers.count();
 	}
 
@@ -31,14 +31,14 @@ public:
 	* @return Layer at given position or nULL if i is out of range.
 	*/
 	RS_Layer* at(uint i) {
-		return layer.at(i);
+		return layers.at(i);
 	}
 
 	void activate(const RS_String& name, bool notify = false);
 	void activate(RS_Layer* layer, bool notify = false);
 	//! @return The active layer of NULL if no layer is activated.
 	RS_Layer* getActive() {
-		return activateLayer;
+		return activeLayer;
 	}
 	virtual void add(RS_Layer* layer);
 	virtual void remove(RS_Layer* layer);
@@ -81,7 +81,7 @@ public:
 
 private:
 	//
-	RS_PtrList<RS_layer> layers;
+	RS_PtrList<RS_Layer> layers;
 	//
 	RS_PtrList<RS_LayerListListener> layerListListeners;
 	//

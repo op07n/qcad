@@ -16,10 +16,13 @@ public:
 
 					   this->center = center;
 					   this->majorP = majorP;
+					   this->ratio = ratio;
 					   this->angle1 = angle1;
 					   this->angle2 = angle2;
 					   this->reversed = reversed;
 	}
+	
+	friend class RS_Ellipse;
 
 	friend std::ostream& operator << (std::ostream& os, const RS_EllipseData& ed) {
 		os<< "(" << ed.center <<
@@ -69,6 +72,7 @@ public:
 		p.set(data.center.x + cos(data.angle2) * getMajorRadius(),
 			data.center.y + sin(data.angle2) * getMinorRadius());
 		p.rotate(data.center, getAngle());
+		return p;
 	}
 
 	virtual void moveStartpoint(const RS_Vector& pos);
@@ -122,7 +126,7 @@ public:
 	}
 
 	RS_Vector getMajorP() {
-		return data.ratio;
+		return data.majorP;
 	}
 
 	void setRatio(double r) {
@@ -133,7 +137,7 @@ public:
 		if (isReversed()) {
 			return data.angle1- data.angle2;
 		} else {
-			return data.angle2 - data.angle2;
+			return data.angle2 - data.angle1;
 		}
 	}
 
@@ -156,7 +160,7 @@ public:
 	virtual RS_Vector getNearestDist(double distance,
 		                             const RS_Vector& coord,
 									 double* dist = NULL);
-	virtual RS_Vector getDistanceToPoint(const RS_Vector& coord,
+	virtual double getDistanceToPoint(const RS_Vector& coord,
 		                                 RS_Entity** entity = NULL,
 										 RS2::ResolveLevel level = RS2::ResolveNone,
 										 double solidDist = RS_MAXDOUBLE);
@@ -170,11 +174,11 @@ public:
 	virtual void mirror(RS_Vector axisPoint1, RS_Vector axisPoint2);
 	virtual void moveRef(const RS_Vector& ref, const RS_Vector& offset);
 
-	virtual void draw(RS_Painter* painterm RS_GraphicView* view, double patternOffset = 0.0);
+	virtual void draw(RS_Painter* painter, RS_GraphicView* view, double patternOffset = 0.0);
 
 	friend std::ostream& operator << (std::ostream& os, const RS_Ellipse& a);
 
-	virtual void caculateBorders();
+	virtual void calculateBorders();
 
 protected:
 	RS_EllipseData data;

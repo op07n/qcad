@@ -30,6 +30,10 @@ public:
 		flags = 0;
 	}
 
+	void setFlags(unsigned int f) {
+		flags = f;
+	}
+
 	void setFlag(unsigned int f) {
 		flags = flags|f;
 	}

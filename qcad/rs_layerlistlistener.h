@@ -3,10 +3,6 @@
 
 #include "rs_layer.h"
 
-/**
-* This class is an interface for classes that are intersted in 
-* knowing about the changes in the layer list.
-*/
 
 class RS_LayerListListener {
 public:
@@ -38,12 +34,7 @@ public:
 	*/
 	virtual void layerToggled(RS_Layer*) {}
 
-}
-;
-
-
-
-
+};
 
 
 #endif

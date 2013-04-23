@@ -48,3 +48,5 @@ public:
 	double angle2;
 	bool reversed;
 };
+
+#endif
