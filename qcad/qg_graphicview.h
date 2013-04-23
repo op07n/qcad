@@ -45,7 +45,71 @@ public:
 	virtual RS_Painter* createPainter();
 	virtual RS_Painter* createDirectPainter();
 	virtual void destroyPainter();
-	virtual 
+	virtual void setBackground(const RS_Color& bg);
+	virtual void setMouseCursor(RS2::CursorType c);
+	virtual void updateGridStatusWidget(const RS_String& text);
 
+	//Methods from RS_LayerListListener Interface:
+	virtual void layerEdited(RS_Layer*) {
+		redraw();
+	}
+	virtual void layerRemoved(RS_Layer*) {
+		redraw();
+	}
+	virtual void layerToggled(RS_Layer*) {
+		redraw();
+	}
+
+protected:
+	virtual void emulateMouseMoveEvent();
+	virtual void mousePressEvent(QMouseEvent* e);
+	virtual void mouseReleaseEvent(QMouseEvent* e);
+	virtual void mouseMoveEvent(QMouseEvent* e);
+#if QT_VERSION>=0x030000
+	virtual void tabletEvent(QTableEvent* e);
+#endif
+	virtual void leaveEvent(QEvent*);
+	virtual void enterEvent(QEvent*);
+	virtual void focusInEvent(QFocusEvent*);
+	virtual void focusOutEvent(QFocusEvent*);
+	virtual void wheelEvent(QWheelEvent*);
+	virtual void keyPressEvent(QKeyEvent* e);
+	virtual void keyReleaseEvent(QKeyEvent* e);
+
+	void paintEvent(QPaintEvent *);
+	virtual void resizeEvent(QResizeEvent* e);
+
+	void previewUrl(const QUrl &u);
+
+private slots:
+		void slotHScrolled(int value);
+		void slotVscrolled(int value);
+private:
+	//
+	QPixmap* buffer;
+
+protected:
+	int lastWidth;
+	int lastHeight;
+	//!
+	QG_ScrollBar* hScrollBar;
+	//
+	QG_ScrollBar* vScrollBar;
+	//
+	QGridLayout* layout;
+	//
+	QLabel* gridStatus;
+	//
+	QCursor* curCad;
+	//
+	QCursor* curDel;
+	//
+	QCursor* curSelect;
+	//
+	QCursor* curMagnifier;
+	//
+	QCursor* curHand;
 
 };
+
+#endif

@@ -213,5 +213,14 @@
     <ClInclude Include="rs_undocycle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="qc_dialogfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qg_dialogfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_dialogfactoryinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
