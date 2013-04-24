@@ -262,7 +262,59 @@ public:
 	* action.
 	* @param nextAction ID of next action to create after selecting was done
 	*/
-	
+	virtual void requestToolBarSelect(RS_ActionInterface* selectAction,
+		                              RS2::ActionType nextAction) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a dialog to edit the given entity.
+	* 
+	* @param entity Pointer to the entity.
+	*/
+	virtual bool requestModifiedEntityDialog(RS_Entity* entity) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* dialog to edit text entity attributes.
+	*
+	* @param entity Pointer to the text entity.
+	*/
+	virtual bool requestTextDialog(RS_Text* text) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must presnet
+	* a dialog to select pattern attributes.
+	*
+	* @param entity Pointer to the hatch entity.
+	*/
+	virtual bool requestHatchDialog(RS_Hatch* hatch) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a dialog for general application options.
+	*/
+	virtual void requestOptionsGeneralDialog() = 0;
+
+	/** 
+    * This virtual method must be overwritten and must present
+	* a dialog for drawing options.
+	* 
+	* @param graphic Graphic document.
+	*/
+	virtual void requestOptionsDrawingDialog(RS_Graphic& graphic) = 0;
+
+#ifdef RS_CAM
+	virtual bool requestCamOptionsDialog(RS_Graphic& graphic) = 0;
+#endif
+
+	/** 
+	* This virtual method must be overwritten if the graphic view has
+	* a componet that is interested in the current mouse position.
+	* The implementation will be called every time the mouse position
+	* changed,
+	*
+	*  @param abs Aboslute coordinate of the mouse cursor or the 
+	*                             
 
 };
 #endif 
