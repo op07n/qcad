@@ -28,6 +28,7 @@ class RS_MoveData;
 class RS_MoveRotateData;
 class RS_Painter;
 class RS_Rotate2Data;
+class RS_RotateData;
 class RS_RoundData;
 class RS_ScaleData;
 class RS_Solid;
@@ -83,19 +84,6 @@ public:
 	* This virtual method must be overwritten and must provide
 	* a dialog that asks for permission for removing the selected
 	* layer from the layer list. The method must not actually
-	* remove the layer. This is up to the caller.
-	*
-	* @return The implementation is expected to return a pointer
-	*         to the layer which can be removed or NULL if the user
-	*         cancels the dialog.
-	*/
-	virtual RS_Layer* requestLayerRemovalDialog(
-		RS_LayerList* layerList = NULL) = 0;
-
-	/** 
-	* This virtual method must be overwritten and must provide
-	* a dialog that asks for permission for removing the selected
-	* layer from the layer list. The method must not actually
 	* remove the layer, This is up to the caller.
 	* @return The implemantation is expected to return a pointer
 	*         to the layer which can be removed or NULL if the user
@@ -103,6 +91,18 @@ public:
 	*/
 	virtual RS_Layer* requestLayerRemovalDialog(
 		RS_LayerList* layerList = NULL ) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must provide
+	* a dialog to edit the layers attributes. The method must 
+	* not actually edit the layer. This is up to the caller.
+	*
+	* @return The implementation is expected to return a pointer
+	*         to the layer which can be removed or NULL if the user
+	*         cancels the dialog.
+	*/
+	virtual RS_Layer* requestEditLayerDialog(
+		RS_LayerList* layerList = NULL) = 0;
 
 	/** 
 	* This virtual method must be overwritten and must provide
@@ -120,7 +120,149 @@ public:
 	virtual RS_BlockData requestNewBlockDialog(RS_BlockList* blockList) = 0;
 
 	/**
+	* This virtual method must be overwritten and must provide 
+	* a dialog that asks for permission for removing the selected
+	* block from the block list. The method must not actually
+	* remove the block. This is up to the caller.
+	*
+	* @return The implementation is expected to return a pointer
+	*         to the block which can be removed or NULL if the user
+    *         cancels the dialog.
 	*/
+	virtual RS_Block* requestBlockRemovalDialog(
+		RS_BlockList* blockList) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must provide 
+	* a dialog that allows to change blocks attributes of the 
+	* currently active block.
+	* @return The implementation is expected to return a pointer
+	*         to the block which was changed or NULL if the user
+	*         cancel the dialog.
+	*/
+	virtual RS_BlockData requestBlockAtributesDialog(
+		RS_BlockList* blockList) = 0;
+
+	/** 
+	* This virtual method must be overwritten and should provide 
+	* a new way to edit a block.
+	*/
+	virtual void requestEditBlockWindow(
+		RS_BlockList* blockList) = 0;
+
+	virtual void closeEditBlockWindow(RS_Block* block) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must provide
+	* a dialog to get a filename for opening an image file, The method must 
+	* not actually open the file. This is up tp the caller.
+	*
+	* @return The implementation is expected to return a string
+	*         which contains the file name or an empty string if
+	*         the user cancels the dialog.
+	*/
+	virtual RS_String requestImageOpenDialog() = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for options for the given action.
+	*
+	* @param action Pointer to the action which needs the option.
+	* @param on true: switch widget on, false: off
+	* @param update true: widget gets data from the action, false:
+	*   widget gets data from the config file.
+	*/
+	virtual void requestOption(RS_ActionInterface* action,
+		bool on, bool update = false) = 0;
+
+	/** 
+	* This virtual method must be overwrittten and must present
+	* a widget for snap point with distance options.
+	*
+	* @param dist Distance which can be directly changed
+	*             by the present widget.
+	* @param on true: switch widget on, false: off
+	*/
+	virtual void requestSnapDistOptions(double& dist, bool on) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for  entity attributes;
+	* 
+	* @param data Attributes data which can be directly changed
+	*             by the present widget.
+	*/
+	virtual bool requestAttributesDialog(RS_AttributesData& data,
+		RS_LayerList& layerList) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for  move options (number of copies);
+	* 
+	* @param data Move data which can be directly changed
+	*             by the present widget.
+	*/
+	virtual bool requestMoveDialog(RS_MoveData& data) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for rotate options (number of copies, angle).
+	* 
+	* @param data Rotation data which can be directly changed
+	*             by the presented widget.
+	*/
+	virtual bool requestRotateDialog(RS_RotateData& data) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for rotate options (number of copies, angle).
+	*
+	* @param data Scaling data which can be directly changed
+	*             by the presented widget.
+	*/
+	virtual bool requestScaleDialog(RS_ScaleData& data) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for mirro options (number of copies);
+	* 
+	* @param data Mirror data which can be directly changed
+	*             by the presented widget.
+	*/
+	virtual bool requestMirrorDialog(RS_MirrorData& data) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for move/rotate options (number of copies,angle).
+    * 
+	* @param data Move/rotate data which can be directly changed
+	*             by the presented widget.
+	*/
+	virtual bool requestMoveRotateDialog(RS_MoveRotateData& data) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must present
+	* a widget for rotate around two centers options (number of
+	* copies, angles).
+	* @param data Rotate data which can be directly changed
+	*             by the presented widget.
+	*/
+	virtual bool requestRotate2Dialog(RS_Rotate2Data& data) = 0;
+
+	/** 
+	* This virtual method must be overwirtten and  must show 
+	* the given toolbar.
+	* @param id Tool bar ID.
+	*/
+	virtual void requestToolBar(RS2::ToolBarId id) = 0;
+
+	/** 
+	* This virtual method must be overwritten and must show
+	* the tag toolbar with a button for launching the given
+	* action.
+	* @param nextAction ID of next action to create after selecting was done
+	*/
+	
 
 };
 #endif 
