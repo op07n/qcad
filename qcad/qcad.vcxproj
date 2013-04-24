@@ -162,6 +162,8 @@
     <ClInclude Include="rs_color.h" />
     <ClInclude Include="rs_commandevent.h" />
     <ClInclude Include="rs_debug.h" />
+    <ClInclude Include="rs_dialogfactory.h" />
+    <ClInclude Include="rs_dialogfactoryadapter.h" />
     <ClInclude Include="rs_dialogfactoryinterface.h" />
     <ClInclude Include="rs_dict.h" />
     <ClInclude Include="rs_document.h" />

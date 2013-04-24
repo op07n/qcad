@@ -271,7 +271,7 @@ public:
 	* 
 	* @param entity Pointer to the entity.
 	*/
-	virtual bool requestModifiedEntityDialog(RS_Entity* entity) = 0;
+	virtual bool requestModifyEntityDialog(RS_Entity* entity) = 0;
 
 	/** 
 	* This virtual method must be overwritten and must present
@@ -314,7 +314,47 @@ public:
 	* changed,
 	*
 	*  @param abs Aboslute coordinate of the mouse cursor or the 
-	*                             
+	*  @param rel Relative coordinate.
+	*/
+	virtual void updateCoordinateWidget(const RS_Vector& abs,
+		                                const RS_Vector& rel,
+										bool updateFormat=false) = 0;
 
+	/** 
+	* This virtual method must be overwritten if the graphic view has
+	* a component that is interested in the current mouse button hints,
+	* The implementation will be called typically bt actions to inform
+	* the user about the current functionalty of the mouse buttons.
+	*
+	* @param left help text for the left mouse button.
+	* @param right Help text for the right mouse button.
+	*/
+	virtual void updateMouseWidget(const RS_String& left,
+		                           const RS_String& right) = 0;
+
+	/** 
+	* This virtual method must be overwritten if the graphic view has a 
+	* component that is interested in the current number of selected
+	* entities,
+	* The implementation will be called every time the selection
+	* change.
+	*
+	* @param num Number of selected entities
+	*/
+	virtual void updateSelectionWidget(int num) = 0;
+
+	/** 
+	* this virtual method must be overwritten if the graphic view has
+	* a component that is interested in command messages (such as a 
+	* command line history).
+	* The implementation will be called typically by actions to inform
+	* the user about current events and errors.
+	*
+	* @param message The message for the user.
+	*/
+	virtual void commandMessage(const RS_String& message) = 0;
+
+
+	virtual void is Adapter() = 0;
 };
 #endif 
