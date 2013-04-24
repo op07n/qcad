@@ -56,7 +56,7 @@ public:
 		return data.pos;
 	}
 
-	virtual moveStartpoint(const RS_Vector& pos);
+	virtual void moveStartpoint(const RS_Vector& pos);
 
 	/** @return Copy of data that defines the point */
 	RS_PointData getData() const {
@@ -85,7 +85,7 @@ public:
 		                               double* dist = NULL);
 	virtual RS_Vector getNearestDist(double distance, 
 		                             const RS_Vector& coord, 
-		                             double* dist /* = NULL */)
+		                             double* dist /* = NULL */);
 	virtual RS_Vector getDistanceToPoint(const RS_Vector& coord,
 	                                     RS_Entity** entity=NULL,
 										 RS2::ResolveLevel level=RS2::ResolveNone,

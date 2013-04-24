@@ -35,7 +35,7 @@ public:
 	* more Undoables.
 	*/
 	void addUndoable(const RS_Undoable* u) {
-		undoable.append(u);
+		undoables.append(u);
 	}
 
 	/**
