@@ -153,9 +153,6 @@
     <ClInclude Include="rs_ellipse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rs_grahic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="rs_blocklist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -241,6 +238,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="rs_preview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_graphic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

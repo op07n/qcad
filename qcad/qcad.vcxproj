@@ -160,6 +160,7 @@
     <ClInclude Include="rs_block.h" />
     <ClInclude Include="rs_blocklist.h" />
     <ClInclude Include="rs_circle.h" />
+    <ClInclude Include="rs_clipboard.h" />
     <ClInclude Include="rs_color.h" />
     <ClInclude Include="rs_commandevent.h" />
     <ClInclude Include="rs_coordinateevent.h" />
@@ -174,7 +175,7 @@
     <ClInclude Include="rs_entitycontainer.h" />
     <ClInclude Include="rs_event.h" />
     <ClInclude Include="rs_flags.h" />
-    <ClInclude Include="rs_grahic.h" />
+    <ClInclude Include="rs_graphic.h" />
     <ClInclude Include="rs_graphicview.h" />
     <ClInclude Include="rs_img.h" />
     <ClInclude Include="rs_insert.h" />
