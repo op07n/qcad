@@ -154,6 +154,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui"</Command>
     </CustomBuild>
     <ClInclude Include="rs.h" />
+    <ClInclude Include="rs_actioninterface.h" />
     <ClInclude Include="rs_arc.h" />
     <ClInclude Include="rs_atomicentity.h" />
     <ClInclude Include="rs_block.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="rs_circle.h" />
     <ClInclude Include="rs_color.h" />
     <ClInclude Include="rs_commandevent.h" />
+    <ClInclude Include="rs_coordinateevent.h" />
     <ClInclude Include="rs_debug.h" />
     <ClInclude Include="rs_dialogfactory.h" />
     <ClInclude Include="rs_dialogfactoryadapter.h" />
@@ -170,6 +172,7 @@
     <ClInclude Include="rs_ellipse.h" />
     <ClInclude Include="rs_entity.h" />
     <ClInclude Include="rs_entitycontainer.h" />
+    <ClInclude Include="rs_event.h" />
     <ClInclude Include="rs_flags.h" />
     <ClInclude Include="rs_grahic.h" />
     <ClInclude Include="rs_graphicview.h" />
@@ -189,8 +192,10 @@
     <ClInclude Include="rs_pen.h" />
     <ClInclude Include="rs_point.h" />
     <ClInclude Include="rs_pointarray.h" />
+    <ClInclude Include="rs_preview.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
+    <ClInclude Include="rs_snapper.h" />
     <ClInclude Include="rs_string.h" />
     <ClInclude Include="rs_stringlist.h" />
     <ClInclude Include="rs_undo.h" />
