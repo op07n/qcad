@@ -31,5 +31,20 @@ public:
 		       RS_GraphicView* graphicView=NULL,
 			   bool handleUndo=true);
 
+	RS_Entity* createParallelThrough(const RS_Vector& coord,
+		                      int number,
+							  RS_Entity* e);
+
+	RS_Entity* createParallel(const RS_Vector& coord,
+		                      double distance,
+							  int number,
+							  RS_Entity* e);
+	
+	RS_Line* createParallelLine(const RS_Vector& coord,
+		                          double distance, int number,
+								  RS_Line* e);
+
+
+
 
 };

@@ -180,6 +180,7 @@
     <ClInclude Include="rs_flags.h" />
     <ClInclude Include="rs_graphic.h" />
     <ClInclude Include="rs_graphicview.h" />
+    <ClInclude Include="rs_image.h" />
     <ClInclude Include="rs_img.h" />
     <ClInclude Include="rs_insert.h" />
     <ClInclude Include="rs_keyevent.h" />
