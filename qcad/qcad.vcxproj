@@ -196,6 +196,7 @@
     <ClInclude Include="rs_pen.h" />
     <ClInclude Include="rs_point.h" />
     <ClInclude Include="rs_pointarray.h" />
+    <ClInclude Include="rs_polyline.h" />
     <ClInclude Include="rs_preview.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />

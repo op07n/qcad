@@ -255,5 +255,8 @@
     <ClInclude Include="rs_creation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_polyline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
