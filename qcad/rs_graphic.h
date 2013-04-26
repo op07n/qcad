@@ -93,6 +93,41 @@ public:
 		layerList.removeListener(listener);
 	}
 
+	// Wrappers for variable function:
+	void clearVariables() {
+		variableDict.clear();
+	}
+
+	int countVariables() {
+		return variableDict.count();
+	}
+
+	void addVariable(const RS_String& key,const RS_Vector& value, int code) {
+		variableDict.add(key, value, code);
+	}
+    void addVariable(const RS_String& key,const RS_String& value, int code) {
+		variableDict.add(key, value, code);
+	}
+	void addVariable(const RS_String& key,int value, int code) {
+		variableDict.add(key, value, code);
+	}
+	void addVariable(const RS_String& key,double value, int code) {
+		variableDict.add(key, value, code);
+	}
+
+	RS_Vector getVariableVector(const RS_String& key, const RS_Vector& def) {
+		return variableDict.getVector(key, def);
+	}
+	RS_String getVariableString(const RS_String& key, const RS_String& def) {
+		return variableDict.getString(key, def);
+	}
+	int getVariableInt(const RS_String& key, int def) {
+		return variableDict.getInt(key, def);
+	}
+	double getVariableDouble(const RS_String& key, double def) {
+		return variableDict.getDouble(key, def);
+	}
+
 
 
 
