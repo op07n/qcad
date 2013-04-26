@@ -18,7 +18,7 @@ public:
 	*
 	*/
 
-	unit count() {
+	uint count() {
 		return blocks.count();
 	}
 
@@ -26,7 +26,7 @@ public:
 	* block at given position
 	*/
 
-	RS_Block* at(unit i {
+	RS_Block* at(unit i) {
 		return blocks.at(i);
 	}
 
@@ -66,7 +66,7 @@ public:
 	/*
 	*
 	*/
-	virtualbool isModified() const {
+	virtual bool isModified() const {
 		return modified;
 	}
 

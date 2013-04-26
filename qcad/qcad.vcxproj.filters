@@ -246,5 +246,14 @@
     <ClInclude Include="rs_graphic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_blocklistlistener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_constructionline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_creation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

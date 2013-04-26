@@ -45,7 +45,43 @@ public:
 	RS_Block* blockAt(int i) {
 		return graphic.blockAt(i);
 	}
-}; 
 
+	void addLayer(RS_Layer* l);
+	bool hasLayer(const RS_String& name);
+	int countLayers() {
+		return graphic.countLayers();
+	}
+	RS_Layer* layerAt(int i) {
+		return graphic.layerAt(i);
+	}
+
+	void addEntity(RS_Entity* e);
+
+	uint count() {
+		return graphic.count();
+	}
+	RS_Entity* entityAt(uint i) {
+		return graphic.entityAt();
+	}
+	RS_Entity* firstEntity() {
+		return graphic.findEntity();
+	}
+
+	RS_Entity* nextEntity() {
+		return graphic.nextEntity();
+	}
+
+	RS_Graphic* getGraphic() {
+		return &graphic;
+	}
+
+	friend std::ostream& operator << (std::ostream& os, RS_Clipboard& cb);
+
+
+protected:
+	static RS_Clipboard* uniqueInstance;
+
+	RS_Graphic graphic;
+}; 
 
 #endif

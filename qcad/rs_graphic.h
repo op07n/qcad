@@ -128,9 +128,73 @@ public:
 		return variableDict.getDouble(key, def);
 	}
 
+	void removeVariable(const RS_String& key) {
+		variableDict.remove(key);
+	}
 
+	RS_Dict<RS_Variable>& getVariableDict() {
+		return variableDict.getVariableDict();
+	}
 
+	RS2::LinearFormat getLinearFormat();
+	int getLinearPrecision();
+	RS2::AngleFormat getAngleFormat();
+	int getAnglePrecision();
 
+	RS_Vector getPaperSize();
+	void setPaperSize(const RS_Vector& s);
+
+	RS_Vector getPaperInsertionBase();
+	void setPaperInsertionBase(const RS_Vector& p);
+
+	RS2::PaperFormat getPaperFormat(bool* landscape);
+	void setPaperFormat(RS2::PaperFormat f, bool landscape);
+
+	double getPaperScale();
+	void setPaperScale(double s);
+
+	virtual void setUnit(RS2::Unit u);
+	virtual RS2::Unit getUnit();
+
+	bool isGridOn();
+	void setDraftOn(bool on);
+
+	/** Sets unit of the graphic's dimensions to 'u' */
+
+	//
+
+	//
+
+	void centerToPage();
+	void fitToPage();
+
+	/** 
+	* @retval true The document has been modified since it was last saved.
+	* @retval fase the dociument has not been modified since it was last saved.
+	*/
+	virtual bool isModified() const {
+		return modified || layerList.isModified() || blockList.isModified();
+	}
+
+	/** 
+	* Sets the document modified status to 'm'
+	*/
+	virtual void setModified(bool m) {
+		modified = m;
+		layerList.setModified(m);
+		blockList.setModified(m);
+	}
+
+#ifdef RS_CAM
+	RS_CamData& getCamData() {
+		return camData;
+	}
+	void setCamData(const RS_CamData& d) {
+		camData = d;
+	}
+#endif
+
+	friend std::ostream& operator << (std::ostream& os, RS_Graphic& g);
 
 private:
 	RS_LayerList layerList;

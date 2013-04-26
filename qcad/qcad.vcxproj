@@ -159,11 +159,14 @@
     <ClInclude Include="rs_atomicentity.h" />
     <ClInclude Include="rs_block.h" />
     <ClInclude Include="rs_blocklist.h" />
+    <ClInclude Include="rs_blocklistlistener.h" />
     <ClInclude Include="rs_circle.h" />
     <ClInclude Include="rs_clipboard.h" />
     <ClInclude Include="rs_color.h" />
     <ClInclude Include="rs_commandevent.h" />
+    <ClInclude Include="rs_constructionline.h" />
     <ClInclude Include="rs_coordinateevent.h" />
+    <ClInclude Include="rs_creation.h" />
     <ClInclude Include="rs_debug.h" />
     <ClInclude Include="rs_dialogfactory.h" />
     <ClInclude Include="rs_dialogfactoryadapter.h" />
