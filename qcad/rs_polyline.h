@@ -108,8 +108,42 @@ public:
 	}
 
 	virtual RS_VectorSolutions getRefPoints();
+	virtual RS_Vector getNearestRef(const RS_Vector& coord, 
+		double* dist = NULL);
+	virtual RS_Vector getNearestSelectedRef(const RS_Vector& coord, 
+		double* dist = NULL );
 
+	virtual RS_Entity* addVertex(const RS_Vector& coord,
+		                      double* dist = NULL);
 
+	virtual void setNextbulge(double bulge) {
+		nextBulge = bulge;
+	}
+	virtual void addEntity(RS_Entity* entity);
+	//
+	virtual void removeLastVertex();
+	virtual void endPolyline();
+
+	//virtual void reorder();
+
+	virtual void move(RS_Vector offset);
+	virtual void rotate(RS_Vector center, double angle);
+	virtual void scale(RS_Vector center, RS_Vector factor);
+	virtual void mirror(RS_Vector axisPoint1, RS_Vector axisPoint2);
+	virtual void moveRef(const RS_Vector& ref, const RS_Vector& offset);
+	virtual void stretch(RS_Vector firstcorner,
+		RS_Vector secondCorner, 
+		RS_Vector offset);
+
+	virtual void draw(RS_Painter* painter, 
+		RS_GraphicView* view,
+		double patternOffset = 0.0  );
+
+	friend std::ostream& operator << (std::ostream& os, const RS_Polyline& l);
+
+	protected:
+		virtual RS_Entity* createVertex(const RS_Vector& v,
+			double bulge=0.0, bool prepend=false);
 
 protected:
 	RS_PolylineData data;
