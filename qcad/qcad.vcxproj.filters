@@ -261,5 +261,11 @@
     <ClInclude Include="rs_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_dimaligned.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_dimension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

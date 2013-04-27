@@ -172,6 +172,8 @@
     <ClInclude Include="rs_dialogfactoryadapter.h" />
     <ClInclude Include="rs_dialogfactoryinterface.h" />
     <ClInclude Include="rs_dict.h" />
+    <ClInclude Include="rs_dimaligned.h" />
+    <ClInclude Include="rs_dimension.h" />
     <ClInclude Include="rs_document.h" />
     <ClInclude Include="rs_ellipse.h" />
     <ClInclude Include="rs_entity.h" />
