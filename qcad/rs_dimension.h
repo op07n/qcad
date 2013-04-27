@@ -98,9 +98,80 @@ public:
 		return data;
 	}
 
-	RS_Vector
+	RS_Vector getNearestRef(const RS_Vector& coord, double* dist);
+	RS_Vector getNearestSelectedRef(const RS_Vector& coord, double* dist);
+
+	RS_String getLabel(bool resolve=true);
+	void setLabel(const RS_String& l);
 
 
+	/** 
+	* Needs to be implemeted by the dimension class to return 
+	* the measurement of the dimension (e.g. 10.5 or 15'12").
+	*/
+	virtual RS_String getMeasureLabel() =0;
+
+	/** 
+	* Must be overwritten by implemetning dimension entity class
+	* to update the subentities which make up the dimension entity.
+	*/
+	virtual void update(bool autoText=false) =0 ;
+
+	void updateCreateDimensionLine(const RS_Vector& p1, const RS_Vector& p2,
+		bool arrow1=true, bool arrow2=true, bool autoText=false);
+
+	RS_Vector getDefinitionPoint() {
+		return data.definitionPoint;
+	}
+
+	RS_Vector getMiddleOfText() {
+		return data.middleOfText;
+	}
+
+	RS2::VAlign getVAlign() {
+		return data.valign;
+	}
+
+	RS2::HAlign getHAlign() {
+		return data.halign;
+	}
+
+	RS2::TextLineSpacingStyle getLineSpacingStyle() {
+		return data.lineSpacingStyle;
+	}
+
+	double getLineSpacingFactor() {
+		return data.lineSpacingFactor;
+	}
+
+	RS_String getText() {
+		return data.text;
+	}
+
+	RS_String getStyle() {
+		return data.style;
+	}
+
+    double getAngle() {
+		return data.angle;
+	}
+
+	double getArrowSize();
+	double getExtensionLineExtension();
+	double getExtensionLineOffset();
+	double getDimensionLineGap();
+	double getTextHeight();
+
+	double getGraphicVariable(const RS_String& key, double defMM, int code);
+
+	virtual double getLength() {
+		return -1.0;
+	}
+
+	virtual void move(RS_Vector offset);
+	virtual void rotate(RS_Vector center, double angle);
+	virtual void scale(RS_Vector center, RS_Vector factor);
+	virtual void mirror(RS_Vector axisPoint1, RS_Vector axisPoint2);
 
 protected:
 	/** Data common to all dimension entities. */
