@@ -173,12 +173,17 @@
     <ClInclude Include="rs_dialogfactoryinterface.h" />
     <ClInclude Include="rs_dict.h" />
     <ClInclude Include="rs_dimaligned.h" />
+    <ClInclude Include="rs_dimangular.h" />
     <ClInclude Include="rs_dimension.h" />
+    <ClInclude Include="rs_dimlinear.h" />
+    <ClInclude Include="rs_dimradial.h" />
+    <ClInclude Include="rs_dir.h" />
     <ClInclude Include="rs_document.h" />
     <ClInclude Include="rs_ellipse.h" />
     <ClInclude Include="rs_entity.h" />
     <ClInclude Include="rs_entitycontainer.h" />
     <ClInclude Include="rs_event.h" />
+    <ClInclude Include="rs_eventhandler.h" />
     <ClInclude Include="rs_flags.h" />
     <ClInclude Include="rs_graphic.h" />
     <ClInclude Include="rs_graphicview.h" />

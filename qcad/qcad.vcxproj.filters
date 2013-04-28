@@ -267,5 +267,20 @@
     <ClInclude Include="rs_dimension.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_dimangular.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_dimlinear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_dimradial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_dir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_eventhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
