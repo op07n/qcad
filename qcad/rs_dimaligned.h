@@ -68,7 +68,42 @@ public:
 
 
 	/** 
-	* @return 
+	* @return Copy of data that defines the aligned dimension
+	* @ sett getData()
+	*/
+	RS_DimAlignedData getEData() const {
+		return edata;
+	}
+
+	virtual RS_VectorSolutions getRefPoints();
+
+	virtual RS_String getMeasuredLabel();
+
+	virtual void update(bool autoText=false);
+
+	RS_Vector getExtensionPoint1() {
+		return edata.extensionPoint1;
+	}
+
+	RS_Vector getExtensionPoint2() {
+		return edata.extensionPoint2;
+	}
+
+	virtual bool hasEndpointsWithinWindow(RS_Vector v1, RS_Vector v2);
+
+	virtual void move(RS_Vector offset);
+	virtual void rotate(RS_Vector center, double angle);
+	virtual void scale(RS_Vector center, RS_Vector factor);
+	virtual void stretch(
+		RS_Vector firstCorner,
+		RS_Vector secondCorner,
+		RS_Vector offset);
+	virtual void moveRef(const RS_Vector& ref, const RS_Vector& offset);
+
+	friend std::ostream& operator << (std::ostream& os,
+		                              const RS_DimAligned& d);
+
+
 protected:
 	/** Extended data. */
 	RS_DimAlignedData edata;

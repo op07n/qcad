@@ -109,7 +109,7 @@ public:
 	* Needs to be implemeted by the dimension class to return 
 	* the measurement of the dimension (e.g. 10.5 or 15'12").
 	*/
-	virtual RS_String getMeasureLabel() =0;
+	virtual RS_String getMeasuredLabel() =0;
 
 	/** 
 	* Must be overwritten by implemetning dimension entity class
