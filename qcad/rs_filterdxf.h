@@ -13,5 +13,6 @@
 #include "rs_leader.h"
 #include "rs_polyline.h"
 #include "rs_spline.h"
+#include "rs_solid.h"
 
 #endif

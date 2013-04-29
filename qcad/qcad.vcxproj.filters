@@ -306,5 +306,8 @@
     <ClInclude Include="rs_valuelist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_solid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

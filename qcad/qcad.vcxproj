@@ -215,6 +215,7 @@
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
     <ClInclude Include="rs_snapper.h" />
+    <ClInclude Include="rs_solid.h" />
     <ClInclude Include="rs_spline.h" />
     <ClInclude Include="rs_string.h" />
     <ClInclude Include="rs_stringlist.h" />
