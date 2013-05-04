@@ -14,5 +14,6 @@
 #include "rs_polyline.h"
 #include "rs_spline.h"
 #include "rs_solid.h"
+#include "rs_text.h"
 
 #endif

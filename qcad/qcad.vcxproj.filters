@@ -309,5 +309,8 @@
     <ClInclude Include="rs_solid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
