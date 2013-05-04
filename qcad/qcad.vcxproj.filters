@@ -312,5 +312,11 @@
     <ClInclude Include="rs_text.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_filterdxf1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_filterinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
