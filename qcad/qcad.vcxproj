@@ -119,6 +119,10 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dl_attributes.h" />
+    <ClInclude Include="dl_codes.h" />
+    <ClInclude Include="dl_creationinterface.h" />
+    <ClInclude Include="dl_entities.h" />
     <ClInclude Include="fparser.h" />
     <CustomBuild Include="qg_graphicview.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>

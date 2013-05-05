@@ -318,5 +318,17 @@
     <ClInclude Include="rs_filterinterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dl_attributes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dl_creationinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dl_codes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dl_entities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

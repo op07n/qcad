@@ -15,5 +15,8 @@
 #include "rs_spline.h"
 #include "rs_solid.h"
 #include "rs_text.h"
+#include "rs_image.h"
+
+#include "dl_creationinterface.h"
 
 #endif
