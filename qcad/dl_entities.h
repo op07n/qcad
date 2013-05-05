@@ -592,3 +592,106 @@ struct DL_TextData {
 	/* Rotation angle of dimension text away from default orientation */
 	double angle;
 };
+
+
+/** 
+* generic Dimension data
+*/
+struct DL_DimensionData {
+	/** 
+	* Constructor
+	* Param
+	*/
+	DL_DimensionData(double ddpx, double ddpy, double ddpz,
+		             double dmpx, double dmpy, double dmpz,
+					 int dType,
+					 int dAttachmentPoint,
+					 int dLineSpacingStyle,
+					 double dLineSpacingFactor,
+					 const string& dText,
+					 const string& dStyle,
+					 double dAngle) {
+		  dpx = ddpx;
+		  dpy = ddpy;
+		  dpz = ddpz;
+
+		  mpx = dmpx;
+		  mpy = dmpy;
+		  mpz = dmpz;
+
+		  type = dType;
+
+		  attachmentPoint = dAttachmentPoint;
+		  lineSpacingStyle = dLineSpacingStyle;
+		  lineSpacingFactor = dLineSpacingFactor;
+		  text = dText;
+		  style = dStyle;
+		  angle = dAngle;
+	}
+
+
+	/* X Coordinate of definition point */
+	double dpx;
+	/* Y Coordinate of definition point */
+	double dpy;
+	/* Z Coordinate of definition point */
+	double dpz;
+	/* X Coordinate of middle point of the text */
+	double mpx;
+	/* Y Coordinate of middle point of the text */
+	double mpy;
+	/* Z Coordinate of middle point of the text */
+	double mpz;
+	/* 
+	* Dimension type
+	* 
+	* 0   Rotated, horizontal, or vertical
+	* 1   Aligned
+	* 2   Angular
+	* 3   Diametric
+	* 4   Radius
+	* 5   Angular 3-point
+	* 6   Ordinate
+	* 64  Ordinate type. This is a bit value (bit 7)
+	*     used only with integer value 6. If set.
+	*     ordinate is X-Type; if not set , ordinate is
+	*     Y -Type
+	* 128 This is a bit value (bit 8) added to the 
+	*     other group 70 values if the dimension text
+	*     has been positioned at a user-defined
+	*     location rather than at the default location
+	*/
+	int type;
+    /**
+     * Attachment point.
+     *
+     * 1 = Top left, 2 = Top center, 3 = Top right,
+     * 4 = Middle left, 5 = Middle center, 6 = Middle right,
+     * 7 = Bottom left, 8 = Bottom center, 9 = Bottom right
+     */
+    int attachmentPoint;
+	/** Line spacing style
+	* 
+	* 1 = at least, 2= exact
+	*/
+	int lineSpacingStyle;
+	/** 
+	* Line spacing factpr. 0.25 .. 0.40
+	*/
+	double lineSpacingFactor;
+	/** 
+	* text string
+	* 
+	* text string entered explicity by user or null
+	* or "<>" for the actual measurement or " " (one blank space).
+	* for supressing the text.
+	*/
+	string text;
+	/** Dimension style (font name ) */
+	string style;
+	/** 
+	* Rotation angle of dimension text away from
+	* default orientation.
+	*/
+	double angle;
+};
