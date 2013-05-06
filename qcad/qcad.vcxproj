@@ -201,6 +201,7 @@
     <ClInclude Include="rs_fontlist.h" />
     <ClInclude Include="rs_graphic.h" />
     <ClInclude Include="rs_graphicview.h" />
+    <ClInclude Include="rs_grid.h" />
     <ClInclude Include="rs_hatch.h" />
     <ClInclude Include="rs_image.h" />
     <ClInclude Include="rs_img.h" />

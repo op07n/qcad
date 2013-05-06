@@ -342,5 +342,8 @@
     <ClInclude Include="rs_fontlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

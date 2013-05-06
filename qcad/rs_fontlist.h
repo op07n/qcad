@@ -31,7 +31,24 @@ public:
 	void init();
 
 	void clearFonts();
-	int countFonts() {4`}
+	int countFonts() {
+		return fonts.count();
+	}
+	virtual void removeFont(RS_Font* font);
+	RS_Font* requestFont(const RS_String& name);
+	// @return First font of the list
+	RS_Font* firstFont() {
+		return fonts.first();
+	}
+	/** 
+	* @return Next font from the list after
+	* calling firstFont() or nextFont();
+	*/
+	RS_Font* nextFont() {
+		return fonts.next();
+	}
+
+	friend std::ostream& operator << (std::ostream& os, RS_FontList& l);
 
 protected:
 	static RS_FontList* uniqueInstance;
@@ -39,4 +56,6 @@ private:
 	//! fonts in the graphic
 	RS_PtrList<RS_Font> fonts;
 };
+
+
 #endif
