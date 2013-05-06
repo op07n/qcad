@@ -695,3 +695,475 @@ struct DL_DimensionData {
 	*/
 	double angle;
 };
+
+
+/** 
+* Aligned Dimension Data.
+*/
+struct DL_DimAlignedData {
+	/** 
+	* Constructor
+	* Parameters: see member variables
+	*/
+	DL_DimAlignedData(double depx1, double depy1, double depz1,
+		              double depx2, double depy2, double depz2) {
+
+		epx1 = depx1;
+		epy1 = depy1;
+		epz1 = depz1;
+
+		epx2 = depx2;
+		epy2 = depy2;
+		epz2 = depz2;
+	}
+
+	/* X Coordinate of Extension point 1. */
+	double epx1;
+	/* Y of Ext point 1 */
+	double epy1;
+	/* Z of ext point 1 */
+	double epz1;
+
+	/* X of the ext p 2 */
+	double epx2;
+	/* Y of the ext p2  */
+	double epy2;
+	/* Z of the ext p2 */
+	double epz2;
+};
+
+
+/** 
+* Linear Dimension Data 
+*/
+struct DL_DimLinearData {
+	DL_DimLinearData(double ddpx1, double ddpy1, double ddpz1,
+		             double ddpx2, doouble ddpy2, double ddpz2,
+					 double dAngle, double dOblique) {
+
+	}
+
+	/* X of ext p1 */
+	double dpx1;
+	/* Y 0f ext p1 */
+	double dpy1;
+	/* Z 0f ext p1 */
+	double dpz1;
+
+	/* X of ext p2 */
+	double dpx2;
+	/* Y 0f ext p2 */
+	double dpy2;
+	/* Z 0f ext p2 */
+	double dpz2;
+
+	/* Rotation angle (angle of dimension line) in degrees. */
+	double angle;
+	/* Oblique angle in degrees */
+	double oblique;
+
+};
+
+/** 
+* Radial Dimension data
+*/
+struct DL_DimRadialData {
+	DL_DimRadialData(double ddpx, double ddpy, double ddpz, double dleader) {
+		dpx = ddpx;
+		dpy = ddpy;
+		dpz = ddpz;
+
+
+		leader = dleader;
+	}
+
+	/* X coordinate of definition point */
+	double dpx;
+	/* Y */
+	double dpy;
+	/* Z */
+	double dpz;
+
+	/* Leader length */
+	double leader;
+};
+
+
+/** 
+* Diametric  Dimension Data.
+*/
+struct DL_DimDiametricData {
+	DL_DimDiametricData(double ddpx, double ddpy, double ddpz, double dleader) {
+		dpx = ddpx;
+		dpy = ddpy;
+		dpz = ddpz;
+		
+		leader = dleader;
+	}
+
+	/* X Coor of definition point */
+	double dpx;
+	/* Y Coor of definnition point */
+	double dpy;
+	/* Z coor of definition point */
+	double dpz;
+
+	/* leader length */
+};
+
+
+/** 
+* Angular Dimension Data 
+*/
+struct DL_DimAngularData {
+	DL_DimAngularData(double ddpx1, double ddpy1, double ddpz1,
+		              double ddpx2, double ddpy2, double ddpz2,
+					  double ddpx3, double ddpy3, double ddpz3,
+					  double ddpx4, double ddpy4, double ddpz4) {
+		ddpx1 = dpx1;
+		ddpy1 = dpy1;
+		ddpz1 = dpz1;
+
+		ddpx2 = dpx2;
+		ddpy2 = dpy2;
+		ddpz2 = dpz2;
+
+		ddpx3 = dpx3;
+		ddpy3 = dpy3;
+		ddpz3 = dpz3;
+
+		ddpx4 = dpx4;
+		ddpy4 = dpy4;
+		ddpz4 = dpz4;
+
+	}
+
+/* X Coordinate of deinition point 1 */
+	double dpx1;
+/* Y Coordinate of deinition point 1 */
+	double dpy1;
+/* Z Coordinate of deinition point 1 */
+	double dpz1;
+
+	/* X Coordinate of deinition point2 */
+	double dpx2;
+	/* Y Coordinate of deinition point 2 */
+	double dpy2;
+	/* Z Coordinate of deinition point 2 */
+	double dpz2;
+
+	/* X Coordinate of deinition point 3 */
+	double dpx3;
+	/* Y Coordinate of deinition point 3 */
+	double dpy3;
+	/* Z Coordinate of deinition point 3 */
+	double dpz3;
+
+	/* X Coordinate of deinition point4 */
+	double dpx4;
+	/* Y Coordinate of deinition point4 */
+	double dpy4;
+	/* Z Coordinate of deinition point4 */
+	double dpz4;
+};
+
+
+/** 
+* ( Angular Dimension Data (3 Point version )
+*/
+struct DL_Dimension3PData {
+	DL_Dimension3PData(double ddpx1, double ddpy1, double ddpz1,
+		double ddpx2, double ddpy2, double ddpz2,
+		double ddpx3, double ddpy3, double ddpz3) {
+
+			dpx1 = ddpx1;
+			dpy1 = ddpy1;
+			dpz1 = ddpz1;
+
+			dpx2 = ddpx2;
+			dpy2 = ddpy2;
+			dpz2 = ddpz2;
+
+			dpx3 = ddpx3;
+			dpy3 = ddpy3;
+			dpz3 = ddpz3;
+
+	}
+	
+	/* X Coordinate of deinition point 1 */
+	double dpx1;
+	/* Y Coordinate of deinition point 1 */
+	double dpy1;
+	/* Z Coordinate of deinition point 1 */
+	double dpz1;
+
+	/* X Coordinate of deinition point2 */
+	double dpx2;
+	/* Y Coordinate of deinition point 2 */
+	double dpy2;
+	/* Z Coordinate of deinition point 2 */
+	double dpz2;
+
+	/* X Coordinate of deinition point 3 */
+	double dpx3;
+	/* Y Coordinate of deinition point 3 */
+	double dpy3;
+	/* Z Coordinate of deinition point 3 */
+	double dpz3;
+};
+
+/** 
+* Leader (arrow)
+*/
+struct DL_LeaderData {
+	DL_LeaderData(int lArrowHeadFlag,
+		          int lLeaderPathType,
+				  int lLeaderCreationFlag,
+				  int lHooklineDirectionFlag,
+				  int lHooklineFlag,
+				  double lTexAnnotationHeight,
+				  double lTextAnnotationWidth,
+				  int lNumber) {
+		arrowHeadFlag = lArrowHeadFlag;
+		leaderPathType = lLeaderPathType;
+		leaderCreationFlag = lLeaderCreationFlag;
+		hooklineDirectionFlag = lHooklineDirectionFlag;
+		hooklineFlag = lHooklineFlag;
+		textAnnotationHeight = lTexAnnotationHeight;
+		textAnnotationWidth = lTextAnnotationWidth;
+		number = lNumber;
+	}
+
+	/* Arrow head flag (71) */
+	int arrowHeadFlag;
+	/* Leader path type(72) */
+	int leaderPathType;
+	/* Leader creation flag(73) */
+	int leaderCreationFlag;
+	/* Hookline direction flag(74) */
+	int hooklineDirectionFlag;
+	/* Hookline flag */
+	int hooklineFlag;
+	/* Text annotation height (40) */
+	double textAnnotationHeight;
+	/* Text annnotation width(41) */
+	double textAnnotationWidth;
+	/* Number of vertices in leader (76) */
+	int number;
+};
+
+
+/** 
+* Leader Vertex data.
+*/
+struct DL_LeaderVertexData {
+	DL_LeaderVertexData(double px= 0.0, double py = 0.0, double pz= 0.0) {
+		x = px;
+		y = py;
+		z = pz;
+	}
+
+	/* X coor of the vertex */
+	double x;
+	/* Y of the vertex */
+	double y;
+	/* Z of the vertex */
+	double z;
+};
+
+
+/* 
+* hatch data
+*/
+struct DL_HatchData {
+	DL_HatchData() {}
+
+	DL_HatchData(int hNumLoops,
+		         bool hSolid,
+				 double hScale,
+				 double hAngle,
+				 const string& hPattern) {
+	   numLoops = hNumLoops;
+	   solid = hSolid;
+	   scale = hScale;
+	   angle = hAngle;
+	   pattern = hPattern;
+	}
+
+    /* Number of boundary paths(loops) */
+	int numLoops;
+	/* Solid fill flag (tru = solid, false = pattern */
+	bool solid;
+	/* Pattern scale or spacing */
+	double scale;
+	/* Pattern angle */
+	double angle;
+    /* Pattern name */
+	string pattern;
+};
+
+/** 
+* Hatch boundary path (loop) data.
+*/
+struct DL_HatchLoopData {
+	DL_HatchLoopData() {}
+	
+	DL_HatchLoopData(int hNumEdges) {
+		numEdges = hNumEdges;
+	}
+
+	/* Number of edges in this loop */
+	int numEdges;
+};
+
+
+/** 
+* Hatch edge data
+*/
+struct DL_HatchEdgeData {
+	DL_HatchEdgeData() {
+		defined = false;
+	}
+
+	/** 
+	* Constructor for an line edge 
+	*/
+	DL_HatchEdgeData(double lx1, double ly1,
+		             double lx2, double ly2) {
+         x1 = lx1;
+		 y1 = ly1;
+		 x2 = lx2;
+		 y2 = ly2;
+		 type = 1;
+		 defined = true;
+	}
+	/** 
+	* Constructor for an arc edge 
+	*/
+	DL_HatchEdgeData(double acx, double acy,
+		             double aRadius,
+					 double aAngle1, double aAngle2,
+					 bool aCcw) {
+	       cx = acx;
+		   cy = acy;
+		   radius = aRadius;
+		   angle1 = aAngle1;
+		   angle2 =aAngle2;
+		   ccw = aCcw;
+		   type = 2;
+		   defined = true;
+	}
+
+	/** 
+	* Edge type. 1 = line, 2 = arc.
+	*/
+	int type;
+
+	/** 
+	* Set to true if this edge is fully defined.
+	*/
+	bool defined;
+
+	/* Start p(X) */
+	double x1;
+	/* Start p(Y) */
+	double y1;
+	/* End p(X) */
+	double x2;
+	/* End p(Y) */
+	double y2;
+	/* Center p of arc(X) */
+	double cx;
+	/* Center p of arc(Y) */
+	double cy;
+	/* Arc radius */
+	double radius;
+	/* Start angle */
+	double angle1;
+	/* End angle */
+	double angle2;
+	/* Counterclockwise flag */
+	bool ccw;
+};
+
+/** 
+* Image Data
+*/
+struct DL_ImageData {
+	DL_ImageData(const string& iref,
+		         double iipx, double iipy, double iipz,
+				             double iux, double iuy, double iuz,
+							 double ivx, double ivy, double ivz,
+							 int iwidth, int iheight,
+							 int ibrightness, int icontrast, int ifade) {
+			ref = iref;
+			ipx = iipx;
+			ipy = iipy;
+			ipz = iipz;
+			       ux = iux;
+			       uy = iuy;
+			       uz = iuz;
+			       vx = ivx;
+			       vy = ivy;
+			       vz = ivz;
+				   width = iwidth;
+				   height = iheight;
+				   brightness = ibrightness;
+				   constrast = icontrast;
+				   fade = ifade;
+	}
+     
+	/* Reference to the image file 
+	      (unique, used to refer to the image def object). */
+	string ref;
+	/* X Coor of insertion p */
+	double ipx;
+	/* Y Coor of inseteion p */
+	double ipy;
+	/* Z Coor of insertion */
+	double ipz;
+	     /* X Co of u vector along bottom of image */
+	     double ux;
+		 /* Y Co of u vector along bottom of image */
+		 double uy;
+		 /* Z Co of u vector along bottom of image */
+		 double uz;
+		 /* X Co of v vector along bottom of image */
+		 double vx;
+		 /* Y Co of v vector along bottom of image */
+		 double vy;
+		 /* Z Co of v vector along bottom of image */
+		 double vz;
+		 /* width of image in pixel */
+		 int width;
+		 /* Height of image in pixel */
+		 int height;
+		 /* Brightness(0..100, degfualt = 50 ) */
+		 int brightness;
+		 /* Contrast (0..100, defualt = 50 ) */
+		 int constrast;
+		 /* Fade (0..100, defualt = 0) */
+		 int fade;
+};
+
+
+/** 
+* Image Definition Data
+*/
+struct DL_ImageDefData {
+
+	DL_ImageDefData(const string& iref,
+		                            const string& ifile) {
+			ref = iref;
+			   file = ifile;
+	}
+
+	/* Reference to the  image file 
+	     (unique , used to refer to the iamge def object */
+	string ref;
+
+	     /* Image file */
+	string file;
+};
+
+#endif
