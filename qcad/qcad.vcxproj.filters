@@ -330,5 +330,8 @@
     <ClInclude Include="dl_entities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dl_extrusion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
