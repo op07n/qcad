@@ -209,12 +209,12 @@ struct DL_CircleData {
 /** 
 * PolyLine Data
 */
-struct DL_PolyLineData {
+struct DL_PolylineData {
 	/** 
 	* Constructor
 	* Parameters : see member variables
 	*/
-	DL_PolyLineData(int pNumber, int pMVerteces, int pNVerteces, int pFlags) {
+	DL_PolylineData(int pNumber, int pMVerteces, int pNVerteces, int pFlags) {
 		number = pNumber;
 		m = pMVerteces;
 		n = pNVerteces;
