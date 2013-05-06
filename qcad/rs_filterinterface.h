@@ -43,8 +43,14 @@ class RS_FilterInterface {
 	}
 
 	/** 
-	* The implementation
+	* The implementation of this method in a inherited format
+	* class should read a file from disk and put the entities
+	* into the current entity container
 	*/
+	virtual bool fileImport(RS_Graphic& g, const RS_String& file, RS2::FormatType type) = 0;
+
+	/**
+	* The implementation of this method in a inherited 
 
 
 protected:
