@@ -50,8 +50,28 @@ class RS_FilterInterface {
 	virtual bool fileImport(RS_Graphic& g, const RS_String& file, RS2::FormatType type) = 0;
 
 	/**
-	* The implementation of this method in a inherited 
+	* The implementation of this method in a inherited  format
+	* class should write the entity in the current entity container
+	* to a file on the disk.
+	*/
+	virtual bool fileExport(RS_Graphic& g, const RS_String& file, RS2::FormatType type) = 0;
 
+protected:
+	/** 
+	* Adds a file extension which can be imported by this filter.
+	*/
+	void addImportFormat(RS2::FormatType type) {
+		RS_Debug->print("Filter can import %d", (int)type);
+		importFormats += type;
+	}
+
+	/** 
+	* Adds a file extension which can be exported by this filter.
+	*/
+	void addExportFormat(RS2::FormatType type) {
+		RS_Debug->print("Filter can export %^d", (int)type);
+		exportFormats += type;
+	}
 
 protected:
 	//

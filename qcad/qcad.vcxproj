@@ -196,6 +196,8 @@
     <ClInclude Include="rs_filterdxf1.h" />
     <ClInclude Include="rs_filterinterface.h" />
     <ClInclude Include="rs_flags.h" />
+    <ClInclude Include="rs_font.h" />
+    <ClInclude Include="rs_fontchar.h" />
     <ClInclude Include="rs_graphic.h" />
     <ClInclude Include="rs_graphicview.h" />
     <ClInclude Include="rs_hatch.h" />

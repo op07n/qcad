@@ -333,5 +333,11 @@
     <ClInclude Include="dl_extrusion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_fontchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
