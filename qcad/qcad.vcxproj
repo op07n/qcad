@@ -228,6 +228,10 @@
     <ClInclude Include="rs_previewactioninterface.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
+    <ClInclude Include="rs_script.h" />
+    <ClInclude Include="rs_scriptlist.h" />
+    <ClInclude Include="rs_selection.h" />
+    <ClInclude Include="rs_settings.h" />
     <ClInclude Include="rs_snapper.h" />
     <ClInclude Include="rs_solid.h" />
     <ClInclude Include="rs_spline.h" />
