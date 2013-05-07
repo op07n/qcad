@@ -345,5 +345,14 @@
     <ClInclude Include="rs_grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_information.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_previewactioninterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_modification.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

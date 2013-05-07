@@ -205,6 +205,7 @@
     <ClInclude Include="rs_hatch.h" />
     <ClInclude Include="rs_image.h" />
     <ClInclude Include="rs_img.h" />
+    <ClInclude Include="rs_information.h" />
     <ClInclude Include="rs_insert.h" />
     <ClInclude Include="rs_keyevent.h" />
     <ClInclude Include="rs_layer.h" />
@@ -215,6 +216,7 @@
     <ClInclude Include="rs_linetypepattern.h" />
     <ClInclude Include="rs_mainwindowinterface.h" />
     <ClInclude Include="rs_math.h" />
+    <ClInclude Include="rs_modification.h" />
     <ClInclude Include="rs_mouseevent.h" />
     <ClInclude Include="rs_painter.h" />
     <ClInclude Include="rs_painterqt.h" />
@@ -223,6 +225,7 @@
     <ClInclude Include="rs_pointarray.h" />
     <ClInclude Include="rs_polyline.h" />
     <ClInclude Include="rs_preview.h" />
+    <ClInclude Include="rs_previewactioninterface.h" />
     <ClInclude Include="rs_ptrlist.h" />
     <ClInclude Include="rs_regexp.h" />
     <ClInclude Include="rs_snapper.h" />
