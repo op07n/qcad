@@ -366,5 +366,11 @@
     <ClInclude Include="rs_settings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_staticgraphicview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

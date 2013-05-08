@@ -235,8 +235,10 @@
     <ClInclude Include="rs_snapper.h" />
     <ClInclude Include="rs_solid.h" />
     <ClInclude Include="rs_spline.h" />
+    <ClInclude Include="rs_staticgraphicview.h" />
     <ClInclude Include="rs_string.h" />
     <ClInclude Include="rs_stringlist.h" />
+    <ClInclude Include="rs_system.h" />
     <ClInclude Include="rs_text.h" />
     <ClInclude Include="rs_undo.h" />
     <ClInclude Include="rs_undoable.h" />
