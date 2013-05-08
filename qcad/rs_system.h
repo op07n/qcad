@@ -17,7 +17,28 @@ protected:
 	RS_System() {
 		initialized = false;
 	}
+
+public:
+	/** 
+	* @return Instance to the unique system object.
+	*/
+	static RS_System* instance() {
+		if (uniqueInstance==NULL) {
+			uniqueInstance = new RS_System();
+		}
+		return uniqueInstance;
+	}
 protected:
-	static RS_System* unique
+	static RS_System* uniqueInstance;
+
+	RS_String appName;
+	RS_String appVersion;
+	RS_String appDirName;
+	RS_String appDir;
+
+	//
+	RS_StringList languageList;
+
+	bool initialized;
 };
 #endif
