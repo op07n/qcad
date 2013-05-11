@@ -372,5 +372,14 @@
     <ClInclude Include="rs_system.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rs_units.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_textstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rs_datetime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

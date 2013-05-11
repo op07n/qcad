@@ -172,6 +172,7 @@
     <ClInclude Include="rs_constructionline.h" />
     <ClInclude Include="rs_coordinateevent.h" />
     <ClInclude Include="rs_creation.h" />
+    <ClInclude Include="rs_datetime.h" />
     <ClInclude Include="rs_debug.h" />
     <ClInclude Include="rs_dialogfactory.h" />
     <ClInclude Include="rs_dialogfactoryadapter.h" />
@@ -240,9 +241,11 @@
     <ClInclude Include="rs_stringlist.h" />
     <ClInclude Include="rs_system.h" />
     <ClInclude Include="rs_text.h" />
+    <ClInclude Include="rs_textstream.h" />
     <ClInclude Include="rs_undo.h" />
     <ClInclude Include="rs_undoable.h" />
     <ClInclude Include="rs_undocycle.h" />
+    <ClInclude Include="rs_units.h" />
     <ClInclude Include="rs_valuelist.h" />
     <ClInclude Include="rs_variable.h" />
     <ClInclude Include="rs_variabledict.h" />
