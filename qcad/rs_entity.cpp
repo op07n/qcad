@@ -269,6 +269,66 @@ bool RS_Entity::isVisible() {
 		}
 	}
 
+	if(getBlockOrInsert()==NULL) {
+		return true;
+	}
 
+	if(getBlockOrInsert()->rtti()==RS2::EntityBlock) {
+		if (getLayer(false)==NULL || !getLayer(false)->isFrozen()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
+	if(getBlockOrInsert()->getLayer()==NULL) {
+		return true;
+	}
+
+	if(!getBlockOrInsert()->getLayer()->isFrozen()) {
+		return true;
+	}
+
+	return false;
 	
 }
+
+
+/** 
+* Sets the highlight status of the entity . Highlighted entities 
+* usually indicate a feedback to a user action.
+*/
+void RS_Entity::setHighlighted(bool on) {
+	if(on) {
+		setFlag(RS2::FlagHighlighted);
+	} else {
+		delFlag(RS2::FlagHighlighted);
+	}
+}
+
+
+/** 
+* @return true if the entity is highlighted.
+*/
+bool RS_Entity::isHighlighted() {
+	return getFlag(RS2::FlagHighlighted);
+}
+
+
+/** 
+* @return true if the layer this entity is on is locked.
+*/
+bool RS_Entity::isLocked() {
+	if(getLayer(true)!=NULL && getLayer()->isLocked()) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/** 
+* @return THe parent graphic in which this entity is stored 
+* or the parent's parent graphic or NULL if none of the parents
+* are stored in a graphic.
+*/
