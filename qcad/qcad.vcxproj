@@ -160,6 +160,7 @@
     </CustomBuild>
     <ClInclude Include="rs.h" />
     <ClInclude Include="rs_actioninterface.h" />
+    <ClInclude Include="rs_application.h" />
     <ClInclude Include="rs_arc.h" />
     <ClInclude Include="rs_atomicentity.h" />
     <ClInclude Include="rs_block.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="rs_dict.h" />
     <ClInclude Include="rs_dimaligned.h" />
     <ClInclude Include="rs_dimangular.h" />
+    <ClInclude Include="rs_dimdiametric.h" />
     <ClInclude Include="rs_dimension.h" />
     <ClInclude Include="rs_dimlinear.h" />
     <ClInclude Include="rs_dimradial.h" />
@@ -221,6 +223,7 @@
     <ClInclude Include="rs_mouseevent.h" />
     <ClInclude Include="rs_painter.h" />
     <ClInclude Include="rs_painterqt.h" />
+    <ClInclude Include="rs_pattern.h" />
     <ClInclude Include="rs_pen.h" />
     <ClInclude Include="rs_point.h" />
     <ClInclude Include="rs_pointarray.h" />
@@ -228,6 +231,7 @@
     <ClInclude Include="rs_preview.h" />
     <ClInclude Include="rs_previewactioninterface.h" />
     <ClInclude Include="rs_ptrlist.h" />
+    <ClInclude Include="rs_ptrqueue.h" />
     <ClInclude Include="rs_regexp.h" />
     <ClInclude Include="rs_script.h" />
     <ClInclude Include="rs_scriptlist.h" />
@@ -242,11 +246,14 @@
     <ClInclude Include="rs_system.h" />
     <ClInclude Include="rs_text.h" />
     <ClInclude Include="rs_textstream.h" />
+    <ClInclude Include="rs_translator.h" />
     <ClInclude Include="rs_undo.h" />
     <ClInclude Include="rs_undoable.h" />
     <ClInclude Include="rs_undocycle.h" />
     <ClInclude Include="rs_units.h" />
+    <ClInclude Include="rs_utility.h" />
     <ClInclude Include="rs_valuelist.h" />
+    <ClInclude Include="rs_valuevector.h" />
     <ClInclude Include="rs_variable.h" />
     <ClInclude Include="rs_variabledict.h" />
     <ClInclude Include="rs_vector.h" />
