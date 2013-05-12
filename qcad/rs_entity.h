@@ -414,8 +414,9 @@ public:
 protected:
 
 	RS_EntityContainer* parent;
-
+	//! minimum coordinates
 	RS_Vector minV;
+	//! maximum coordinates
 	RS_Vector maxV;
 
 	RS_Layer* layer;

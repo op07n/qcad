@@ -18,7 +18,7 @@
 
 /**
 * Class namespace for various enum along with some simple.
-*wrapper methods for converting the enums to the Qt
+* wrapper methods for converting the enums to the Qt
 * counterparts.
 *
 * @author Andrew Mustun
