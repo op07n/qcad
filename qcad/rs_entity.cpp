@@ -328,7 +328,16 @@ bool RS_Entity::isLocked() {
 }
 
 /** 
-* @return THe parent graphic in which this entity is stored 
+* @return The parent graphic in which this entity is stored 
 * or the parent's parent graphic or NULL if none of the parents
 * are stored in a graphic.
 */
+RS_Graphic* RS_Entity::getGraphic() {
+	if (rtti()==RS2::EntityGraphic){
+		return (RS_Graphic*)this;
+	} else if (parent==NULL) {
+		return NULL;
+	} else {
+		return parent->getGraphic();
+	}
+}
