@@ -341,3 +341,39 @@ RS_Graphic* RS_Entity::getGraphic() {
 		return parent->getGraphic();
 	}
 }
+
+
+/** 
+* @return The parent block in which this entity is stored
+* or the parent's parent block or NULL if none of the parents
+* are stored in a block.
+*/
+RS_Block* RS_Entity::getBlock() {
+	if(rtti()==RS2::EntityBlock) {
+		return (RS_Block*)this;
+	} else if(parent==NULL) {
+		return NULL;
+	} else {
+		return parent->getBlock();
+	}
+}
+
+/** 
+* @return The parent insert in which this entity is stored
+
+* or the parent's parent block or NULL if none of the parents
+* are stored in a block.
+*/
+RS_Insert* RS_Entity::getInsert() {
+	if(rtti()==RS2::EntityInsert) {
+		return (RS_Insert*)this;
+	} else if (parent==NULL) {
+		return NULL;
+	} else {
+		return parent->getInsert();
+	}
+}
+
+
+
+
