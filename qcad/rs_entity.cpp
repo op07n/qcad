@@ -375,5 +375,159 @@ RS_Insert* RS_Entity::getInsert() {
 }
 
 
+/** 
+* @return THe parent or insert in which this entity is stroed
+* or the parent's parent block or insert or NULL if noe of the parents
+* are stored in a block or insert.
+*/
+RS_Entity* RS_Entity::getBlockOrInsert() {
+	if(rtti()==RS2::EntityBlock || rtti()==RS2::EntityInsert) {
+		return this;
+	} else if (parent==NULL) {
+		return NULL;
+	} else {
+		return parent->getBlockOrInsert();
+	}
+}
 
 
+
+
+/** 
+* @return THe parent document in which this entity is stored
+* or the parent's parent document or NUKK if none of the parents
+* are stored in a document. Note that a document is usually 
+* either a graphic or a Block.
+*/
+RS_Document* RS_Entity::getDocument() {
+	if (isDocument()==-true) {
+		return (RS_Document*)this;
+	} else if(parent==NULL){
+		return NULL;
+	} else {
+		return parent->getDocument();
+	}
+}
+
+
+/** 
+* Sets a variable value for the parent graphic object.
+*
+* @param key Variable name(e.g. "DIMAX")
+* @param val Default value
+*/
+void RS_Entity::addGraphicVariable(const RS_String& key, double val, int code)
+{
+	RS_Graphic* graphic = getGraphic();
+	if(graphic!=NULL) {
+		graphic->addVariable(key, val, code);
+	}
+}
+
+
+
+/** 
+* Sets a variable value for the parent graphic object.
+*
+* @param key Variable name(e.g. "DIMAX")
+* @param val Default value
+*/
+void RS_Entity::addGraphicVariable(const RS_String& key, int val, int code)
+{
+	RS_Graphic* graphic = getGraphic();
+	if(graphic!=NULL) {
+		graphic->addVariable(key, val, code);
+	}
+}
+
+
+/** 
+* Sets a variable value for the parent graphic object.
+*
+* @param key Variable name(e.g. "DIMAX")
+* @param val Default value
+*/
+void RS_Entity::addGraphicVariable(const RS_String& key, const RS_String& val, int code)
+{
+	RS_Graphic* graphic = getGraphic();
+	if(graphic!=NULL) {
+		graphic->addVariable(key, val, code);
+	}
+}
+
+
+
+/** 
+* A safe member function to return the given variable.
+*
+* @param key Variable name (e.g. "$DIMASZ")
+* @param def Default value
+* 
+* @return value of variable or default value if the given variable
+*         doesn't exist.
+*/
+double RS_Entity::getGraphicVariableDouble(const RS_String& key, double def){
+	RS_Graphic* graphic = getGraphic();
+	double ret=def;
+	if (graphic!=NULL)
+	{
+		ret = graphic->getVariableDouble(key, def);
+	}
+	return ret;
+}
+
+
+
+/** 
+* A safe member function to return the given variable.
+*
+* @param key Variable name (e.g. "$DIMASZ")
+* @param def Default value
+* 
+* @return value of variable or default value if the given variable
+*         doesn't exist.
+*/
+int RS_Entity::getGraphicVariableInt(const RS_String& key, int def){
+	RS_Graphic* graphic = getGraphic();
+	int ret=def;
+	if (graphic!=NULL)
+	{
+		ret = graphic->getGraphicVariableInt(key, def);
+	}
+	return ret;
+}
+
+
+/** 
+* A safe member function to return the given variable.
+*
+* @param key Variable name (e.g. "$DIMASZ")
+* @param def Default value
+* 
+* @return value of variable or default value if the given variable
+*         doesn't exist.
+*/
+RS_String RS_Entity::getGraphicVariableString(const RS_String& key, 
+	const RS_String& def){
+	RS_Graphic* graphic = getGraphic();
+	RS_String ret=def;
+	if (graphic!=NULL)
+	{
+		ret = graphic->getGraphicVariableInt(key, def);
+	}
+	return ret;
+}
+
+
+/** 
+* Returns a pointer to the layer this entity is on or NULL.
+* 
+* @para resolve true: if the layer is ByBlock, the layer of the 
+*               block this entity is in is returned;
+*               false: the layer if the entity is returnd.
+* 
+* @return poiter to the layer this entity is on. If the layer
+* is set to NULL the layer of the next paretn that is not on 
+* layer NULL is returned . If all parents are on layer NULL, NULL
+* is returned.
+*/
