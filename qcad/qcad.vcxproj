@@ -91,6 +91,7 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="qc_applicationwindow.cpp" />
+    <ClCompile Include="rs_arc.cpp" />
     <ClCompile Include="rs_entity.cpp" />
   </ItemGroup>
   <ItemGroup>

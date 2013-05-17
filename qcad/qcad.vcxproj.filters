@@ -56,6 +56,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qg_actionhandler.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="rs_arc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="qcad.ui">

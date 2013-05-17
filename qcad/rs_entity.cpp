@@ -519,15 +519,113 @@ RS_String RS_Entity::getGraphicVariableString(const RS_String& key,
 }
 
 
+
+/** 
+* @return THe unit the parent graphic works on or None if there's no 
+* parent graphic.
+*/
+RS2::Unit RS_Entity::getGraphicUnit() {
+	RS_Graphic* graphic = getGraphic();
+	RS2::Unit ret = RS2::None;
+	if(graphic!=NULL) {
+		ret = graphic->getUnit();
+	}
+	return ret;
+}
+
+
+
 /** 
 * Returns a pointer to the layer this entity is on or NULL.
 * 
 * @para resolve true: if the layer is ByBlock, the layer of the 
 *               block this entity is in is returned;
-*               false: the layer if the entity is returnd.
+*               false: the layer if the entity is returned.
 * 
-* @return poiter to the layer this entity is on. If the layer
-* is set to NULL the layer of the next paretn that is not on 
+* @return pointer to the layer this entity is on. If the layer
+* is set to NULL the layer of the next parent that is not on 
 * layer NULL is returned . If all parents are on layer NULL, NULL
 * is returned.
 */
+RS_Layer* RS_Entity::getLayer(bool resolve) const {
+	if(resolve) {
+		// we have no layer but a parent that might have one.
+		//return parent's layer instead;
+		if (layer==NULL /*|| layer->getName()=="ByBlock"*/){
+			if (parent!=NULL) {
+				return parent->getLayer(true);
+			} else {
+				return NULL;
+			}
+		}
+	}
+
+	//return our layer. might still be NULL;
+	return layer;
+}
+
+
+/**
+* Sets the layer of this entity to the layer with the given name
+*/
+void RS_Entity::setLayer(const RS_String& name) {
+	RS_Graphic* graphic = getGraphic();
+	if(graphic!=NULL) {
+		layer = graphic->findLayer(name);
+	} else {
+		layer = NULL;
+	}
+}
+
+
+
+/** 
+* Sets the layer of this entity to the layer given
+*/
+void RS_Entity::setLayer(RS_Layer* l) {
+	layer = l;
+}
+
+
+
+/** 
+* Sets the layer of this entity to the current layer of 
+* the graphic this entity is in. If this entity (and none
+* of its parents) are in a graphic the layer is set to NUKK.
+*/
+void RS_Entity::setLayerToActive() {
+	RS_Graphic* graphic = getGraphic();
+
+	if(graphic!=NULL) {
+		layer = grahic->getActiveLayer();
+	} else {
+		layer = NULL;
+	}
+}
+
+
+/** 
+* Gets the pen needed to draw this entity.
+* The attributes can also come from the layer this entity is on
+* if the flag are set accordingly.
+*
+* @param resolve true: Resolve the pen to drawable pen (e.g. the pen
+*        from the layer or parent..)
+*        false: Don't resolve and return a pen or ByLayer, ByBlock, ...
+* @ return Pen for this entity.
+*/
+RS_Pen RS_Entity::getPen(bool resolve) const {
+
+	if (!resolve){
+		return pen;
+	} else {
+		
+		RS_Pen p= pen;
+		RS_Layer* l = getLayer(true);
+
+		//use parental attributes (e.g. vertex of a polyline, block
+		//entities when they are drawn in block documents):
+
+	}
+}
+
